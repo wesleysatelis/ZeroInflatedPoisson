@@ -1,0 +1,106 @@
+---
+title: '\LARGE \textbf {Proposta: Modelos de Poisson inflacionados em zero}'
+subtitle: |
+          | \small ME714 | ANÁLISE DE DADOS DISCRETOS
+          | \small Profa. Dra. Hildete Prisco Pinheiro
+date: 29 de abril de 2021
+author: | 
+        | \normalsize Caroline da Silva Mangile 195539
+        | \normalsize Gabriela Inocente Yogi 141812
+        | \normalsize Rodrigo Resende Soares Rocha 186819
+        | \normalsize Wesley R. da Silva Satelis 188650
+documentclass: article
+geometry: "left=2.3cm, right=2.3cm, top=2cm, bottom=2cm"
+output:
+  pdf_document:
+    number_sections: true
+    latex_engine: 'xelatex'
+bibliography: "referencias.bib"
+biblio-style: "plain"
+link-citations: true
+colorlinks: false
+lang: pt-BR
+fontsize: 11pt
+
+header-includes:
+- \usepackage{lineno}
+# - \linenumbers
+- \usepackage{subcaption}
+- \usepackage{scrextend}
+- \usepackage{tikz}
+- \usepackage{pgfplots}
+- \usetikzlibrary{shapes.geometric, arrows}
+- \usepackage{caption}
+- \usepackage{float}
+- \pgfplotsset{compat=1.16}
+# para kableExtra
+- \usepackage{booktabs}
+- \usepackage{longtable}
+- \usepackage{array}
+- \usepackage{multirow}
+- \usepackage{wrapfig}
+- \usepackage{float}
+- \usepackage{colortbl}
+- \usepackage{pdflscape}
+- \usepackage{tabu}
+- \usepackage{threeparttable}
+- \usepackage{threeparttablex}
+- \usepackage[normalem]{ulem}
+- \usepackage{makecell}
+# - \floatplacement{figure}{H}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F, out.extra = "", message = F, message=F, results="hide",
+                      warning = F, fig.align="center", fig.pos = "H")
+```
+
+<!-- # Introdução -->
+
+
+
+<!-- # Proposta -->
+
+No trabalho proposto aqui, serão estudados modelos de regressão em que a variável resposta é de contagem, mais especificamente de distribuição Poisson com excesso de zeros.
+
+A distribuição de Poisson é uma distribuição discreta de contagem das ocorrências de um evento em um determinado intervalo de tempo. Uma variável aleatória $X$ segue uma distribuição de Poisson se sua função densidade de probabilidade é dada por 
+
+$$
+P(X=x)=\frac{e^{-\lambda} \lambda^{x}}{x !},
+$$
+
+em que $\lambda > 0$, representa a taxa de ocorrência por unidade média e é também a média e a variância da distribuição.
+
+Um modelo de regressão que tem a quantidade de ocorrências de um evento como variável resposta, é chamado de regressão de Poisson. Uma das suposições deste modelo é que a média e variância são iguais, que é violada quando o conjunto de dados possui muitas contagens iguais a zero. Assim, é necessário ajustar um modelo que leve em conseração essa quantidade de zeros na resposta. 
+
+Em casos como este, uma solução é utilizar Modelos de Poisson Inflacionados em Zero (*Zero-inflated Poisson* - ZIP), veja @lambert1992zero. Em um modelo ZIP, a variável resposta assume uma distribuição Poisson com uma componente degenerativa, com ponto de massa entre 0 e 1. O modelo assume que existem dois tipos de respostas zero, aquelas que estão em excesso e as que não estão. Os zeros em excesso são classificados como estruturais, que apresentam a falta de uma característica não presente na população. Os demais zeros são denominados amostrais, que indicam a ausência de alguma característica no período de coleta da amostra.
+
+Seja $Y$ uma variável resposta de um modelo ZIP,
+
+$$
+P(Y=y)=(1-p) \frac{e^{-\lambda}(\lambda)^{y}}{y !}, \ y=1,2, \ldots
+$$
+
+$$
+P(Y=0)=p+(1-p) e^{-\lambda} \\
+$$
+
+em que $0 < p < 1$. Assim, são incorporados mais zeros do que os permitidos pela distribuição de Poisson. Podemos ainda mostrar que 
+
+$$
+E(Y)=(1-P) \lambda
+$$
+
+$$
+e \ \operatorname{Var}(Y)=E(Y)+E(Y)[\lambda-E(Y)]
+$$
+
+Mais informações em @gupta1996analysis.
+
+O modelo ZIP ajusta dois modelos de regressão, um logístico que considera os zeros em excesso e um com as contagens de interesse. Considerando a importancia dos Modelos de Poisson Inflacionados em Zeros para estes casos específicos da regressão de Poisson e sua utilidade na modelagem de problemas na agricultura, economia, manufaturas, aplicações de patentes, segurança em rodovias, medicina e comportamento sexual, [@hall2000zero] e [@ridout1998models], o trabalho proposto tem o objetivo de estudar profundamente os métodos de estimação de seus parâmetros e aplicação a um conjunto de dados.
+
+Serão feitas análises descritivas, diagnósticos de modelo, interpretações a respeito do problema e predição. Todo o trabalho será conduzido com o uso da linguagem e ambiente de computação estatística R [@programaR].
+
+# Referências
+
+

@@ -1,0 +1,2 @@
+https://stats.idre.ucla.edu/r/dae/zip/
+http://biometry.github.io/APES//LectureNotes/2016-JAGS/Overdispersion/OverdispersionJAGS.html
