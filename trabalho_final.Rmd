@@ -1,0 +1,77 @@
+---
+title: '\LARGE \textbf {Modelos de Regreesão de Poisson Inflacionados em Zero}'
+subtitle: |
+          | \small ME714 | ANÁLISE DE DADOS DISCRETOS
+          | \small Profa. Dra. Hildete Prisco Pinheiro
+date: 2 de julho de 2021
+author: | 
+        | \normalsize Caroline da Silva Mangile 195539
+        | \normalsize Gabriela Inocente Yogi 141812
+        | \normalsize Rodrigo Resende Soares Rocha 186819
+        | \normalsize Wesley R. da Silva Satelis 188650
+documentclass: article
+geometry: "left=2.3cm, right=2.3cm, top=2cm, bottom=2cm"
+output:
+  pdf_document:
+    number_sections: true
+    latex_engine: 'xelatex'
+bibliography: "referencias.bib"
+biblio-style: "plain"
+link-citations: true
+colorlinks: false
+lang: pt-BR
+fontsize: 11pt
+
+header-includes:
+- \usepackage{lineno}
+# - \linenumbers
+- \usepackage{subcaption}
+- \usepackage{scrextend}
+- \usepackage{tikz}
+- \usepackage{pgfplots}
+- \usetikzlibrary{shapes.geometric, arrows}
+- \usepackage{caption}
+- \usepackage{float}
+- \pgfplotsset{compat=1.16}
+# para kableExtra
+- \usepackage{booktabs}
+- \usepackage{longtable}
+- \usepackage{array}
+- \usepackage{multirow}
+- \usepackage{wrapfig}
+- \usepackage{float}
+- \usepackage{colortbl}
+- \usepackage{pdflscape}
+- \usepackage{tabu}
+- \usepackage{threeparttable}
+- \usepackage{threeparttablex}
+- \usepackage[normalem]{ulem}
+- \usepackage{makecell}
+# - \floatplacement{figure}{H}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F, out.extra = "", message = F, message=F, results="hide",
+                      warning = F, fig.align="center", fig.pos = "H")
+```
+
+# Introdução
+
+**ainda tá bem ruim**
+
+Neste trabalho são expostos conceitos teóricos a respeito dos modelos de Poisson Inflacionados em Zero (ZIP) e apresenta uma aplicação prática utilizando um conjunto de dados real. O conjunto de dados é proveniente de viagens de acampamento feitas por 250 grupos de pessoas.
+
+Foram feitas análises descritivas, diagnósticos de modelo, interpretações a respeito do problema e predição. Todo o trabalho foi conduzido com o uso da linguagem e ambiente de computação estatística R [@programaR].
+
+# Métodos
+
+## Distribuição de Poisson
+
+## Modelos de Poisson Inflacionados em Zero (ZIP)
+
+# Aplicação
+
+# Conclusões
+
+# Referências
+
