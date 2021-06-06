@@ -51,8 +51,8 @@ header-includes:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = F, out.extra = "", message = F, message=F, results="hide",
-                      warning = F, fig.align="center", fig.pos = "H")
+knitr::opts_chunk$set(echo = F, out.extra = "", message = F, results="hide",
+                      warning = F, fig.align="center", fig.pos = "H", fig.height = 2)
 ```
 
 # Introdução
@@ -70,6 +70,54 @@ Foram feitas análises descritivas, diagnósticos de modelo, interpretações a 
 ## Modelos de Poisson Inflacionados em Zero (ZIP)
 
 # Aplicação
+
+Os dados são provenientes de 250 acampamentos familiares em um parque nos Estados Unidos. Cada grupo foi questionado sobre o número de peixes eles pegaram, quantas crianças o grupo tinha, quantas pessoas o grupo tinha, e se eles trouxeram um guia.
+
+* **LIVE_BAIT:** Variável binária. Indica se foram usadas iscas vivas ou não;
+* **CAMPER:** Variável binária. Indica se o o grupo foi acompanhado por um guia ou não;
+* **PERSONS:** Variável numérica. Número de pessoas no grupo;
+* **CHILDREN:** Variável numérica. Número de crianças no grupo;
+* **FISH_COUNT:** Variável numérica. Número de peixes pegos pelo grupo;
+
+\newpage
+
+```{r}
+library(tidyverse)
+
+fish <- read_csv("banco/fish.csv")
+
+fish <- within(fish, {
+  # FISH_COUNT <- factor(FISH_COUNT)
+  LIVE_BAIT <- factor(LIVE_BAIT)
+  CAMPER <- factor(CAMPER)
+})
+
+```
+
+```{r, results='hold'}
+summary(fish)
+```
+
+```{r fig.height=2.5}
+ggplot(fish, aes(FISH_COUNT)) + 
+  geom_histogram(col="grey", bins=50) +
+  scale_x_discrete(limits=seq(0, 150, 10)) +
+  theme_bw() +
+  ylab("Frequência") +
+  xlab("Número de peixes")
+```
+
+
+
+```{r, eval=F}
+ggplot(fish, aes(FISH_COUNT)) + 
+  geom_histogram(col="grey") +
+  scale_x_log10() +
+  theme_bw() + 
+  ylab("Frequência") +
+  xlab("Número de peixes pegos")
+```
+
 
 # Conclusões
 
