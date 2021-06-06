@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/Arch Linux) (preloaded format=xelatex 2021.2.25)  6 JUN 2021 10:04
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/Arch Linux) (preloaded format=xelatex 2021.2.25)  6 JUN 2021 10:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1410,21 +1410,21 @@ File: trabalho_final_files/figure-latex/unnamed-chunk-3-1.pdf Graphic file (typ
 e pdf)
 <use trabalho_final_files/figure-latex/unnamed-chunk-3-1.pdf>
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 7.665pt on input line 214.
+(Font)              scaled to size 7.665pt on input line 215.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 5.475pt on input line 214.
+(Font)              scaled to size 5.475pt on input line 215.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.95099pt on input line 214.
+(Font)              scaled to size 10.95099pt on input line 215.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.66568pt on input line 214.
+(Font)              scaled to size 7.66568pt on input line 215.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.4755pt on input line 214.
+(Font)              scaled to size 5.4755pt on input line 215.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 10.94882pt on input line 214.
+(Font)              scaled to size 10.94882pt on input line 215.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.66417pt on input line 214.
+(Font)              scaled to size 7.66417pt on input line 215.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.47441pt on input line 214.
+(Font)              scaled to size 5.47441pt on input line 215.
 The property list \polyglossia@langsetup contains the pairs (without outer
 braces):
 >  {latex/script}  =>  {latin}

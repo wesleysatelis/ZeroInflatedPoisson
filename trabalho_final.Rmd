@@ -59,7 +59,7 @@ knitr::opts_chunk$set(echo = F, out.extra = "", message = F, results="hide",
 
 **ainda tá bem ruim**
 
-Neste trabalho são expostos conceitos teóricos a respeito dos modelos de Poisson Inflacionados em Zero (ZIP) e apresenta uma aplicação prática utilizando um conjunto de dados real. O conjunto de dados é proveniente de viagens de acampamento feitas por 250 grupos de pessoas.
+Neste trabalho são expostos conceitos teóricos a respeito dos modelos de Poisson Inflacionados em Zero (ZIP) e apresenta uma aplicação prática utilizando um conjunto de dados real. O conjunto de dados é formado por viagens de acampamento feitas por 250 grupos de pessoas à um parque nos Estados Unidos.
 
 Foram feitas análises descritivas, diagnósticos de modelo, interpretações a respeito do problema e predição. Todo o trabalho foi conduzido com o uso da linguagem e ambiente de computação estatística R [@programaR].
 
