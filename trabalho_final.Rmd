@@ -67,7 +67,11 @@ Foram feitas análises descritivas, diagnósticos de modelo, interpretações a 
 
 ## Distribuição de Poisson
 
+
+
 ## Modelos de Poisson Inflacionados em Zero (ZIP)
+
+
 
 # Aplicação
 
