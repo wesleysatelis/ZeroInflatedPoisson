@@ -81,7 +81,7 @@ Uma propriedade importante da distribuição de Poisson é que a média e variâ
 Assumindo que a variável resposta tem distribuição de Poissson e que o logaritmo de seu valor esperado pode ser modelado por uma combinação linear de parâmentros desconhecidos. Seja $y_i$, $i = 1, ..., n$ a variável resposta de um modelo de regressão, assumimos que $y_i$ tem distribuição de Poisson com média $\lambda_i$, definida em função das covariáveis $x_i$. Assim, um modelo de regressão de Poisson é dado por
 
 $$
-P(Y_i) = \frac{e^{-\lambda_i}\lambda_i^{y_i}}{y_i!}
+P(y_i) = \frac{e^{-\lambda_i}\lambda_i^{y_i}}{y_i!}
 $$
 
 em que a esperança condicional é dado por $\lambda_i = E(y_i|x_i) = \exp(x'\beta)$. O vetor $\mathrm{x}_{i}^{\prime} = (x_{i,1}, x_{i,2}, ..., x_{i,p})$ contem as covariáveis e $\beta^{\prime}  = (\beta_1, ..., \beta_p)$ é o vetor de parâmetros do modelo de regressão.
@@ -92,20 +92,17 @@ O teste de superdispersão proposto por @cameron é baseado em uma regressão li
 
 $$
 \begin{array}{c}
-{H}_{0}: {Var}\left(y_{i}\right)=\lambda_{i} \\
-{H}_{1}: {Var}\left(y_i\right)=\lambda_{i}+\alpha {g}\left(\lambda_{i}\right)
+{H}_{0}: {Var}\left(y_{i}\right)=\lambda_{i} \ vs \ {H}_{1}: {Var}\left(y_i\right)=\lambda_{i}+\alpha {g}\left(\lambda_{i}\right)
 \end{array}
 $$
 
-em que $\alpha$ é desconhecido e $g(.)$ é uma função definida, comumente $g(\lambda_i)=\lambda_i^2$ ou $g(\lambda_i)=\lambda_i$. Este teste é condusido estimando-se o modelo de Poisson, construindo $\hat{\lambda_i} = \exp \left(\mathrm{x}_i^{\prime} \hat{\beta}\right)$ e ajustando um modelo por mínimos quadrados ordinários sem o intercepto
+em que $\alpha$ é um parâmetro desconhecido e $g(.)$ é uma função definida, comumente $g(\lambda_i)=\lambda_i^2$ ou $g(\lambda_i)=\lambda_i$. Este teste é condusido estimando-se o modelo de Poisson, construindo $\hat{\lambda_i} = \exp \left(\mathrm{x}_i^{\prime} \hat{\beta}\right)$ e ajustando um modelo por mínimos quadrados ordinários sem o intercepto
 
 $$
 \frac{(y_i-\hat{\lambda_i})^2 - y_i} {\hat{\lambda_i}} = \alpha \frac{g(\hat{\lambda_i})} {\hat{\lambda_i}} + e_i
 $$
 
-em que $e_i$ é o erro.
-
-A significância do coeficiente $\alpha$ implica na existencia de superdispersão nos dados.
+em que $e_i$ é o erro. A significância do coeficiente $\alpha$ implica na existencia de superdispersão nos dados.
 
 # Aplicação
 
@@ -117,7 +114,9 @@ Os dados são provenientes de 250 acampamentos familiares em um parque nos Estad
 * **CHILDREN:** Variável numérica. Número de crianças no grupo;
 * **FISH_COUNT:** Variável numérica. Número de peixes pegos pelo grupo;
 
-<!-- \newpage -->
+<!-- teste overdispersion -->
+<!-- https://stats.stackexchange.com/questions/66586/is-there-a-test-to-determine-whether-glm-overdispersion-is-significant -->
+
 
 ```{r}
 library(tidyverse)
