@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/Arch Linux) (preloaded format=xelatex 2021.2.25)  6 JUN 2021 11:21
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/Arch Linux) (preloaded format=xelatex 2021.2.25)  10 JUN 2021 23:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1403,28 +1403,30 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 136
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/usr/share/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-) [1
+)
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 7.665pt on input line 164.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 5.475pt on input line 164.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 10.95099pt on input line 164.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 7.66568pt on input line 164.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 5.4755pt on input line 164.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 10.94882pt on input line 164.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 7.66417pt on input line 164.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 5.47441pt on input line 164.
+[1
 
 ]
 File: trabalho_final_files/figure-latex/unnamed-chunk-3-1.pdf Graphic file (typ
 e pdf)
 <use trabalho_final_files/figure-latex/unnamed-chunk-3-1.pdf>
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 7.665pt on input line 215.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 5.475pt on input line 215.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.95099pt on input line 215.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.66568pt on input line 215.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.4755pt on input line 215.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 10.94882pt on input line 215.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.66417pt on input line 215.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.47441pt on input line 215.
+[2]
 The property list \polyglossia@langsetup contains the pairs (without outer
 braces):
 >  {latex/script}  =>  {latin}
@@ -1459,7 +1461,7 @@ braces):
 >  {portuguese/babelname}  =>  {brazil}
 >  {portuguese/localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {portuguese/Localnumeral}  =>  {polyglossia@C@localnumeral}.
-[2] (./trabalho_final.aux
+[3] (./trabalho_final.aux
 \l@brazil = a dialect from \language\l@portuges 
 Package polyglossia Info: Option: portuguese, variant=brazilian.
 \l@brazil = a dialect from \language\l@portuges 
@@ -1473,12 +1475,12 @@ Package polyglossia Info: Option: portuguese, variant=brazilian.
 Package polyglossia Info: Option: portuguese, variant=brazilian.
 ) ) 
 Here is how much of TeX's memory you used:
- 43435 strings out of 477299
- 974290 string characters out of 5838338
- 1569838 words of memory out of 5000000
- 62324 multiletter control sequences out of 15000+600000
- 409969 words of font info for 79 fonts, out of 8000000 for 9000
+ 43445 strings out of 477299
+ 974549 string characters out of 5838338
+ 1576891 words of memory out of 5000000
+ 62330 multiletter control sequences out of 15000+600000
+ 409985 words of font info for 81 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  106i,8n,118p,751b,479s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on trabalho_final.pdf (2 pages).
+Output written on trabalho_final.pdf (3 pages).

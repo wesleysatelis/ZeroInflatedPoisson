@@ -1,5 +1,5 @@
 ---
-title: '\LARGE \textbf {Modelos de Regreesão de Poisson Inflacionados em Zero}'
+title: '\LARGE \textbf {Modelos de Regressão de Poisson Inflacionados em Zero}'
 subtitle: |
           | \small ME714 | ANÁLISE DE DADOS DISCRETOS
           | \small Profa. Dra. Hildete Prisco Pinheiro
@@ -59,7 +59,7 @@ knitr::opts_chunk$set(echo = F, out.extra = "", message = F, results="hide",
 
 **ainda tá bem ruim**
 
-Neste trabalho são expostos conceitos teóricos a respeito dos modelos de Poisson Inflacionados em Zero (ZIP) e apresenta uma aplicação prática utilizando um conjunto de dados real. O conjunto de dados é formado por viagens de acampamento feitas por 250 grupos de pessoas à um parque nos Estados Unidos.
+Neste trabalho são expostos conceitos teóricos a respeito dos modelos de Poisson Inflacionados em Zero (ZIP) e uma aplicação utilizando um conjunto de dados real. O conjunto é formado por viagens de acampamento feitas por 250 grupos de pessoas à um parque nos Estados Unidos.
 
 Foram feitas análises descritivas, diagnósticos de modelo, interpretações a respeito do problema e predição. Todo o trabalho foi conduzido com o uso da linguagem e ambiente de computação estatística R [@programaR].
 
@@ -67,15 +67,49 @@ Foram feitas análises descritivas, diagnósticos de modelo, interpretações a 
 
 ## Distribuição de Poisson
 
-
-
 ## Modelos de Poisson Inflacionados em Zero (ZIP)
 
+<!-- Modelos de regressão de Poisson deve satisfazer as seguintes proposições. -->
 
+<!-- 1. A variável resposta é uma contagem descrita pela distribuição de Poisson; -->
+<!-- 2. As observações devem ser independentes umas das outras; -->
+<!-- 3. Por definição, a média e variância de uma variável com distribuição de Poisson devem ser iguais; -->
+<!-- 4. $log(\lambda)$ deve ser uma função linear das covariáveis. -->
+
+Uma propriedade importante da distribuição de Poisson é que a média e variância são iguais, $Var(y_i|x_i) = E(y_i|x_i) = \lambda_i$, esta propriedade é referida como equidispersão. Na prática a suposição de equidispersão é violada quando a variância das contagens observadas é maior que a média por conta de heterogeneidade não observada ou quando a frequência de zeros é maior que o número de zeros esperado em uma distribuição de Poisson.
+
+Assumindo que a variável resposta tem distribuição de Poissson e que o logaritmo de seu valor esperado pode ser modelado por uma combinação linear de parâmentros desconhecidos. Seja $y_i$, $i = 1, ..., n$ a variável resposta de um modelo de regressão, assumimos que $y_i$ tem distribuição de Poisson com média $\lambda_i$, definida em função das covariáveis $x_i$. Assim, um modelo de regressão de Poisson é dado por
+
+$$
+P(Y_i) = \frac{e^{-\lambda_i}\lambda_i^{y_i}}{y_i!}
+$$
+
+em que a esperança condicional é dado por $\lambda_i = E(y_i|x_i) = \exp(x'\beta)$. O vetor $\mathrm{x}_{i}^{\prime} = (x_{i,1}, x_{i,2}, ..., x_{i,p})$ contem as covariáveis e $\beta^{\prime}  = (\beta_1, ..., \beta_p)$ é o vetor de parâmetros do modelo de regressão.
+
+## Teste de superdispersão
+
+O teste de superdispersão proposto por @cameron é baseado em uma regressão linear sem o intercepto com as hipóteses
+
+$$
+\begin{array}{c}
+{H}_{0}: {Var}\left(y_{i}\right)=\lambda_{i} \\
+{H}_{1}: {Var}\left(y_i\right)=\lambda_{i}+\alpha {g}\left(\lambda_{i}\right)
+\end{array}
+$$
+
+em que $\alpha$ é desconhecido e $g(.)$ é uma função definida, comumente $g(\lambda_i)=\lambda_i^2$ ou $g(\lambda_i)=\lambda_i$. Este teste é condusido estimando-se o modelo de Poisson, construindo $\hat{\lambda_i} = \exp \left(\mathrm{x}_i^{\prime} \hat{\beta}\right)$ e ajustando um modelo por mínimos quadrados ordinários sem o intercepto
+
+$$
+\frac{(y_i-\hat{\lambda_i})^2 - y_i} {\hat{\lambda_i}} = \alpha \frac{g(\hat{\lambda_i})} {\hat{\lambda_i}} + e_i
+$$
+
+em que $e_i$ é o erro.
+
+A significância do coeficiente $\alpha$ implica na existencia de superdispersão nos dados.
 
 # Aplicação
 
-Os dados são provenientes de 250 acampamentos familiares em um parque nos Estados Unidos. Cada grupo foi questionado sobre o número de peixes eles pegaram, quantas crianças o grupo tinha, quantas pessoas o grupo tinha, e se eles trouxeram um guia.
+Os dados são provenientes de 250 acampamentos familiares em um parque nos Estados Unidos. Cada grupo foi questionado sobre o número de peixes capturados, quantas pessoas o grupo tinha e quantas crianças o grupo tinha, e se eles foram acompanhados por um guia.
 
 * **LIVE_BAIT:** Variável binária. Indica se foram usadas iscas vivas ou não;
 * **CAMPER:** Variável binária. Indica se o o grupo foi acompanhado por um guia ou não;
@@ -83,7 +117,7 @@ Os dados são provenientes de 250 acampamentos familiares em um parque nos Estad
 * **CHILDREN:** Variável numérica. Número de crianças no grupo;
 * **FISH_COUNT:** Variável numérica. Número de peixes pegos pelo grupo;
 
-\newpage
+<!-- \newpage -->
 
 ```{r}
 library(tidyverse)
@@ -95,7 +129,6 @@ fish <- within(fish, {
   LIVE_BAIT <- factor(LIVE_BAIT)
   CAMPER <- factor(CAMPER)
 })
-
 ```
 
 ```{r, results='hold'}
@@ -110,8 +143,6 @@ ggplot(fish, aes(FISH_COUNT)) +
   ylab("Frequência") +
   xlab("Número de peixes")
 ```
-
-
 
 ```{r, eval=F}
 ggplot(fish, aes(FISH_COUNT)) + 
