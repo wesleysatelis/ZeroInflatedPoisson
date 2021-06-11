@@ -67,6 +67,24 @@ Foram feitas análises descritivas, diagnósticos de modelo, interpretações a 
 
 ## Distribuição de Poisson
 
+## Teste de superdispersão
+
+O teste de superdispersão proposto por @cameron é baseado em uma regressão linear sem o intercepto com as hipóteses
+
+$$
+\begin{array}{c}
+{H}_{0}: {Var}\left(y_{i}\right)=\lambda_{i} \ \ \ vs \ \ \ {H}_{1}: {Var}\left(y_i\right)=\lambda_{i}+\alpha {g}\left(\lambda_{i}\right)
+\end{array}
+$$
+
+em que $\alpha$ é um parâmetro desconhecido e $g(.)$ é uma função definida, comumente $g(\lambda_i)=\lambda_i^2$ ou $g(\lambda_i)=\lambda_i$. Este teste é condusido estimando-se o modelo de Poisson, construindo $\hat{\lambda_i} = \exp \left(\mathrm{x}_i^{\prime} \hat{\beta}\right)$ e ajustando um modelo por mínimos quadrados ordinários sem o intercepto
+
+$$
+\frac{(y_i-\hat{\lambda_i})^2 - y_i} {\hat{\lambda_i}} = \alpha \frac{g(\hat{\lambda_i})} {\hat{\lambda_i}} + e_i
+$$
+
+em que $e_i$ é o erro. A significância do coeficiente $\alpha$ implica na existencia de superdispersão nos dados.
+
 ## Modelos de Poisson Inflacionados em Zero (ZIP)
 
 <!-- Modelos de regressão de Poisson deve satisfazer as seguintes proposições. -->
@@ -85,24 +103,6 @@ P(y_i) = \frac{e^{-\lambda_i}\lambda_i^{y_i}}{y_i!}
 $$
 
 em que a esperança condicional é dado por $\lambda_i = E(y_i|x_i) = \exp(x'\beta)$. O vetor $\mathrm{x}_{i}^{\prime} = (x_{i,1}, x_{i,2}, ..., x_{i,p})$ contem as covariáveis e $\beta^{\prime}  = (\beta_1, ..., \beta_p)$ é o vetor de parâmetros do modelo de regressão.
-
-## Teste de superdispersão
-
-O teste de superdispersão proposto por @cameron é baseado em uma regressão linear sem o intercepto com as hipóteses
-
-$$
-\begin{array}{c}
-{H}_{0}: {Var}\left(y_{i}\right)=\lambda_{i} \ vs \ {H}_{1}: {Var}\left(y_i\right)=\lambda_{i}+\alpha {g}\left(\lambda_{i}\right)
-\end{array}
-$$
-
-em que $\alpha$ é um parâmetro desconhecido e $g(.)$ é uma função definida, comumente $g(\lambda_i)=\lambda_i^2$ ou $g(\lambda_i)=\lambda_i$. Este teste é condusido estimando-se o modelo de Poisson, construindo $\hat{\lambda_i} = \exp \left(\mathrm{x}_i^{\prime} \hat{\beta}\right)$ e ajustando um modelo por mínimos quadrados ordinários sem o intercepto
-
-$$
-\frac{(y_i-\hat{\lambda_i})^2 - y_i} {\hat{\lambda_i}} = \alpha \frac{g(\hat{\lambda_i})} {\hat{\lambda_i}} + e_i
-$$
-
-em que $e_i$ é o erro. A significância do coeficiente $\alpha$ implica na existencia de superdispersão nos dados.
 
 # Aplicação
 

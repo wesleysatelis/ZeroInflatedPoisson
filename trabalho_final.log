@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/Arch Linux) (preloaded format=xelatex 2021.2.25)  10 JUN 2021 23:24
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/Arch Linux) (preloaded format=xelatex 2021.2.25)  10 JUN 2021 23:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1405,21 +1405,21 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 7.665pt on input line 164.
+(Font)              scaled to size 7.665pt on input line 167.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 5.475pt on input line 164.
+(Font)              scaled to size 5.475pt on input line 167.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.95099pt on input line 164.
+(Font)              scaled to size 10.95099pt on input line 167.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.66568pt on input line 164.
+(Font)              scaled to size 7.66568pt on input line 167.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.4755pt on input line 164.
+(Font)              scaled to size 5.4755pt on input line 167.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 10.94882pt on input line 164.
+(Font)              scaled to size 10.94882pt on input line 167.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.66417pt on input line 164.
+(Font)              scaled to size 7.66417pt on input line 167.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.47441pt on input line 164.
+(Font)              scaled to size 5.47441pt on input line 167.
 [1
 
 ]
@@ -1477,7 +1477,7 @@ Package polyglossia Info: Option: portuguese, variant=brazilian.
 Here is how much of TeX's memory you used:
  43445 strings out of 477299
  974549 string characters out of 5838338
- 1576891 words of memory out of 5000000
+ 1575891 words of memory out of 5000000
  62330 multiletter control sequences out of 15000+600000
  409985 words of font info for 81 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
