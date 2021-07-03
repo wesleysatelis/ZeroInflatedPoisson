@@ -19,7 +19,7 @@ bibliography: "referencias.bib"
 biblio-style: "plain"
 link-citations: true
 colorlinks: false
-lang: pt-BR
+# lang: pt-BR
 fontsize: 11pt
 
 header-includes:
@@ -51,8 +51,25 @@ header-includes:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = F, out.extra = "", message = F, results="hide",
+knitr::opts_chunk$set(echo = F, out.extra = "", message = F,
                       warning = F, fig.align="center", fig.pos = "H", fig.height = 2)
+
+kable <- function(data, caption, col.names=NA, label=NULL, pvalor=FALSE, align = 'c') {
+  if(pvalor==TRUE){
+    data <- data %>%  
+      mutate(`p-valor`=round(`p-valor`, 4)) %>% 
+      mutate(`p-valor`=replace(`p-valor`, `p-valor`<0.0001, 0)) %>%
+      mutate(`p-valor`=as.character(`p-valor`))
+
+    data <- replace(data, data=="0", "< 0,0001")
+  }
+
+  knitr::kable(data, booktabs = TRUE, 
+               digits = 4, caption = caption, align = align,
+               col.names = col.names, linesep="", label = label, 
+               format.args = list(decimal.mark = ',')) %>% 
+  kable_styling(latex_options = "HOLD_position", font_size = 10)
+}
 ```
 
 # Introdução
@@ -104,9 +121,29 @@ $$
 
 em que a esperança condicional é dado por $\lambda_i = E(y_i|x_i) = \exp(x'\beta)$. O vetor $\mathrm{x}_{i}^{\prime} = (x_{i,1}, x_{i,2}, ..., x_{i,p})$ contem as covariáveis e $\beta^{\prime}  = (\beta_1, ..., \beta_p)$ é o vetor de parâmetros do modelo de regressão.
 
+A regressão de Poisson é inadequada quando temos excesso de zeros na amostra porque viola a suposição de equidispersão. @lambert1992zero introduziu o modelo de Poisson Inflacionado em Zero (ZIP) como uma alternativa na modelagem de dados deste tipo. Ele assume que as respostas provêm de dois processos. Um processo modela inflações em zero, incluindo uma proporção $1-p$ de zeros extras e uma $p\exp(\lambda_i)$ de zeros da distribuição de Poisson; e o segundo modela as contagens diferentes de zero usando um modelos de Poisson trucado em zero. Assim, o modelo ZIP é dado por
+
+<!-- $$ -->
+
+<!-- P(Y_i = y_i|x_i, z_i) =  \begin{array}{lrl}\theta_i(z_i) + (1-\theta_i(z_i))\exp(-\lambda_i), y_i = 0 \\ (1-\theta_i(z_i))\frac{e^{-\lambda_i}\lambda_i^{y_i}}{y_i!}, y_i > 0} -->
+<!-- \end{array} -->
+
+<!-- $$ -->
+
+$$
+\mathrm{P}\left(\mathrm{Y}_{\mathrm{i}}=\mathrm{y}_{\mathrm{i}} \mid \mathrm{x}_{\mathrm{i}}, \mathrm{z}_{\mathrm{i}}\right)=\left\{\begin{array}{lrl}
+\theta_{\mathrm{i}}\left(z_{\mathrm{i}}\right)+\left(1-\theta_{\mathrm{i}}\left(z_{\mathrm{i}}\right)\right) \operatorname{Pois}\left(\lambda_{\mathrm{i}} ; 0 \mid \mathrm{x}_{\mathrm{i}}\right) & \text { if } & \mathrm{y}_{\mathrm{i}}=0 \\
+\left(1-\theta_{\mathrm{i}}\left(\mathrm{z}_{\mathrm{i}}\right)\right) \operatorname{Pois}\left(\lambda_{\mathrm{i}} ; \mathrm{y}_{\mathrm{i}} \mid \mathrm{x}_{\mathrm{i}}\right) & \text { if } & \mathrm{y}_{\mathrm{i}}>0
+\end{array}\right.
+$$
+
+em que $z_i$ é um vetor de covariáveis definindo a probabilidade $\theta_i$. A média e variância do modelo são $(1-\theta_i)\lambda_i$ e $(1-\theta_i)(\lambda_i+\theta_i\lambda_i^2)$, respectivamente.
+
+## Teste de Voung
+
 # Aplicação
 
-Os dados são provenientes de 250 acampamentos familiares em um parque nos Estados Unidos. Cada grupo foi questionado sobre o número de peixes capturados, quantas pessoas o grupo tinha e quantas crianças o grupo tinha, e se eles foram acompanhados por um guia.
+Os dados são provenientes de 250 acampamentos familiares em um parque nos Estados Unidos. Cada grupo foi questionado sobre o número de peixes capturados, quantas pessoas e quantas crianças o grupo tinha, e se eles foram acompanhados por um guia.
 
 * **LIVE_BAIT:** Variável binária. Indica se foram usadas iscas vivas ou não;
 * **CAMPER:** Variável binária. Indica se o o grupo foi acompanhado por um guia ou não;
@@ -131,10 +168,14 @@ fish <- within(fish, {
 ```
 
 ```{r, results='hold'}
-summary(fish)
+# l <- summary(fish) %>% as_tibble()
+# kable(l, caption="")
 ```
 
-```{r fig.height=2.5}
+Pelo histograma da Figura 1, nota-se um número elevado de zeros, o que é um indicativo de que um modelo ZIP provavelmente se ajuste melhor aos dados. 
+
+
+```{r fig.height=2.5, eval=F}
 ggplot(fish, aes(FISH_COUNT)) + 
   geom_histogram(col="grey", bins=50) +
   scale_x_discrete(limits=seq(0, 150, 10)) +
@@ -143,15 +184,99 @@ ggplot(fish, aes(FISH_COUNT)) +
   xlab("Número de peixes")
 ```
 
-```{r, eval=F}
+```{r, eval=T, fig.height=3, fig.width=5, fig.cap="Histograma de frequências do número de peixes capturados (variável resposta)."}
 ggplot(fish, aes(FISH_COUNT)) + 
   geom_histogram(col="grey") +
   scale_x_log10() +
   theme_bw() + 
-  ylab("Frequência") +
-  xlab("Número de peixes pegos")
+  ylab("Frequência (escala log10)") +
+  xlab("Peixes capturados")
 ```
 
+```{r}
+library(AER)
+rd <- glm(FISH_COUNT ~ CHILDREN + CAMPER + PERSONS, data = fish, family = poisson)
+disp <- dispersiontest(rd,trafo=1)
+```
+
+Utilizando o teste de superdispersão proposto por @cameron, chegamos à conclusão de que existe superdispersão nos dados ($z \approx 1,8573, \ \alpha \approx 10,6243, \ p-valor \approx 0,03163$). Como a suposição de equidispersão não é satisfeita, não podemos ajustar um modelo de regressão de Poisson padrão. Pelos resultado do teste de Voung e da Figura 1, temos indícios que a superdispersão é causada pelo excesso de zeros na variável resposta (`FISH_COUNT`).
+
+Ajustando um modelo ZIP com as variáveis explicativas `CHILDREN` e `CAMPER` no modelo de contagem e  `PERSONS` no modelo de zeros, chegamos aos resultados apresentados na Tabela 1.
+
+```{r}
+require(ggplot2)
+require(pscl)
+require(boot)
+m1 <- zeroinfl(FISH_COUNT ~ CHILDREN + CAMPER | PERSONS, data = fish)
+```
+
+
+```{r}
+library(kableExtra)
+sum_m1 <- summary(m1) 
+
+count <- sum_m1[["coefficients"]][["count"]] %>% 
+  as_tibble() %>% 
+  rename("p-valor"="Pr(>|z|)") %>% 
+  mutate(Parametro = c("Intercepto", "CHILDREN", "CAMPER (1)"))
+
+zeros <- sum_m1[["coefficients"]][["zero"]] %>% 
+  as_tibble() %>% 
+  rename("p-valor"="Pr(>|z|)") %>% 
+  mutate(Parametro = c("Intercepto", "PERSONS"))
+
+```
+
+
+```{r}
+
+# bind_rows(count, zeros) %>% 
+#   rename(Estimativa=Estimate) %>% 
+#   select(Parametro, Estimativa, `Std. Error`, `z value`, `p-valor`) %>% 
+#   kable(caption="Modelo de zeros.", pvalor=T) %>% 
+#   add_header_above("Modelo de contagem." = 5)
+
+# kable(count, caption="Modelo de contagens.", pvalor=T) 
+# kable(zeros, caption="Modelo de zeros", pvalor=T) 
+
+## compare with normal based approximation
+ic <- confint(m1)
+# kable(ic, caption="Intervalo de confiança dos parâmetros")
+
+Estimate <- c(1.5979, -1.0428, 0.8340, 1.2974, -0.5643)
+Std.Error <- c( 0.0855, 0.1000, 0.0936, 0.3739, 0.1630)
+Z.Value <- c(18.6804, -10.4296, 8.9079, 3.4705, -3.4630)
+P.Valor <- c("<0.001","<0.001","<0.001","5e-04","5e-04")
+Parametro <- c( "Intercepto", "CHILDREN", "CAMPER (1)", "Intercepto", "PEARSONS")
+Porcento2.5 <- c(1.4302, -1.2388, 0.6505, 0.5647, -0.8838)
+Porcento97.5 <- c(1.7655, -0.8469, 1.0175, 2.0302, -0.2449)
+Tabela <- data.frame(Estimate,Std.Error,Z.Value,P.Valor,Parametro,Porcento2.5,Porcento97.5)
+kable(Tabela, caption = "Nome da tabela.")
+```
+
+
+
+<!-- Todos os parâmetros em ambos os modelos são significantes. Podemos testar se o modelo ZIP se ajusta melhor que o modelo sem intercepto, com um teste qui-quadrado da diferença do log da verossimilhança entre o modelo completo e o modelo nulo (somente o intercepto). -->
+
+<!-- All of the predictors in both the count and inflation portions of the model are statistically significant. This model fits the data significantly better than the null model, i.e., the intercept-only model. To show that this is the case, we can compare with the current model to a null model without predictors using chi-squared test on the difference of log likelihoods. -->
+
+<!-- Since we have three predictor variables in the full model, the degrees of freedom for the chi-squared test is 3. This yields a high significant p-value; thus, our overall model is statistically significant. -->
+
+```{r, results="hide"}
+p1 <- glm(FISH_COUNT ~ CHILDREN + CAMPER, family = poisson, data = fish)
+voung <- vuong(p1, m1)
+```
+
+Podemos ainda nos perguntar se o modelo ajustado realmente é superior à regressão padrão de Poisson. Comparando os dois ajustes com o teste de Voung chegamos a um $p-valor \approx 0,00018$, evidenciando que o modelo ZIP é superior ao modelo de Poisson padrão.
+
+```{r}
+mnull <- update(m1, . ~ 1)
+p <- pchisq(2 * (logLik(m1) - logLik(mnull)), df = 3, lower.tail = FALSE)
+```
+
+Com o teste qui-quadrado baseado no log das verossimilhanças **definido em...** podemos testar a hipótese que o modelo ZIP ajustado é superior ao modelo somente com o intercepto. Com um p-valor < 0,0001, temos evidências para afirmar que o modelo ajustado é superior ao modelo somente com intercepto.
+
+**incident risk ratio (IRR) for the Poisson model and odds ratio (OR) for the logistic (zero inflation) model.**
 
 # Conclusões
 

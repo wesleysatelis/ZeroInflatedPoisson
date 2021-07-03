@@ -1,0 +1,27 @@
+---
+title: "Tabela"
+author: "Rodrigo Resende 186819"
+date: "27/06/2021"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r}
+library(kableExtra)
+```
+
+
+```{r}
+Estimate <- c(1.5979, -1.0428, 0.8340, 1.2974, -0.5643)
+Std.Error <- c( 0.0855, 0.1000, 0.0936, 0.3739, 0.1630)
+Z.Value <- c(18.6804, -10.4296, 8.9079, 3.4705, -3.4630)
+P.Valor <- c("<0.001","<0.001","<0.001","5e-04","5e-04")
+Parametro <- c( "Intercepto", "CHILDREN", "CAMPER (1)", "Intercepto", "PEARSONS")
+Porcento2.5 <- c(1.4302, -1.2388, 0.6505, 0.5647, -0.8838)  
+Porcento97.5 <- c(1.7655, -0.8469, 1.0175, 2.0302, -0.2449)
+Tabela <- data.frame(Estimate,Std.Error,Z.Value,P.Valor,Parametro,Porcento2.5,Porcento97.5)
+knitr::kable(Tabela,"pipe", caption = "Colocar Nome da Tabela", col.names = c("Estimate","Std.Error","Z.Value","P.Valor","Parametro", "2.5%","97.5%"),align = c("l","c","c",                                                                        "c","c","c","c"))
+
+```
+
