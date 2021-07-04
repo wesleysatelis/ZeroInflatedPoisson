@@ -74,15 +74,21 @@ kable <- function(data, caption, col.names=NA, label=NULL, pvalor=FALSE, align =
 
 # Introdução
 
-**ainda tá bem ruim**
-
-Neste trabalho são expostos conceitos teóricos a respeito dos modelos de Poisson Inflacionados em Zero (ZIP) e uma aplicação utilizando um conjunto de dados real. O conjunto é formado por viagens de acampamento feitas por 250 grupos de pessoas à um parque nos Estados Unidos.
+Neste trabalho são expostos conceitos teóricos e práticos a respeito dos modelos de Poisson Inflacionados em Zero (ZIP), com uma aplicação utilizando um conjunto de dados real. O conjunto é formado por viagens de acampamento feitas por 250 grupos de pessoas à um parque nos Estados Unidos.
 
 Foram feitas análises descritivas, diagnósticos de modelo, interpretações a respeito do problema e predição. Todo o trabalho foi conduzido com o uso da linguagem e ambiente de computação estatística R [@programaR].
 
 # Métodos
 
 ## Distribuição de Poisson
+
+A distribuição de Poisson é uma distribuição discreta de contagem das ocorrências de um evento em um determinado intervalo de tempo. Uma variável aleatória $X$ segue uma distribuição de Poisson se sua função densidade de probabilidade é dada por 
+
+$$
+P(X=x)=\frac{e^{-\lambda} \lambda^{x}}{x !},
+$$
+
+em que $\lambda > 0$, representa a taxa de ocorrência por unidade média e é também a média e a variância da distribuição.
 
 ## Teste de superdispersão
 
@@ -132,14 +138,12 @@ A regressão de Poisson é inadequada quando temos excesso de zeros na amostra p
 
 $$
 \mathrm{P}\left(\mathrm{Y}_{\mathrm{i}}=\mathrm{y}_{\mathrm{i}} \mid \mathrm{x}_{\mathrm{i}}, \mathrm{z}_{\mathrm{i}}\right)=\left\{\begin{array}{lrl}
-\theta_{\mathrm{i}}\left(z_{\mathrm{i}}\right)+\left(1-\theta_{\mathrm{i}}\left(z_{\mathrm{i}}\right)\right) \operatorname{Pois}\left(\lambda_{\mathrm{i}} ; 0 \mid \mathrm{x}_{\mathrm{i}}\right) & \text { if } & \mathrm{y}_{\mathrm{i}}=0 \\
-\left(1-\theta_{\mathrm{i}}\left(\mathrm{z}_{\mathrm{i}}\right)\right) \operatorname{Pois}\left(\lambda_{\mathrm{i}} ; \mathrm{y}_{\mathrm{i}} \mid \mathrm{x}_{\mathrm{i}}\right) & \text { if } & \mathrm{y}_{\mathrm{i}}>0
+\theta_{\mathrm{i}}\left(z_{\mathrm{i}}\right)+\left(1-\theta_{\mathrm{i}}\left(z_{\mathrm{i}}\right)\right) \operatorname{Pois}\left(\lambda_{\mathrm{i}} ; 0 \mid \mathrm{x}_{\mathrm{i}}\right) & \text { se } & \mathrm{y}_{\mathrm{i}}=0 \\
+\left(1-\theta_{\mathrm{i}}\left(\mathrm{z}_{\mathrm{i}}\right)\right) \operatorname{Pois}\left(\lambda_{\mathrm{i}} ; \mathrm{y}_{\mathrm{i}} \mid \mathrm{x}_{\mathrm{i}}\right) & \text { se } & \mathrm{y}_{\mathrm{i}}>0
 \end{array}\right.
 $$
 
 em que $z_i$ é um vetor de covariáveis definindo a probabilidade $\theta_i$. A média e variância do modelo são $(1-\theta_i)\lambda_i$ e $(1-\theta_i)(\lambda_i+\theta_i\lambda_i^2)$, respectivamente.
-
-## Teste de Voung
 
 # Aplicação
 
@@ -157,7 +161,7 @@ Os dados são provenientes de 250 acampamentos familiares em um parque nos Estad
 
 ```{r}
 library(tidyverse)
-
+set.seed(13)
 fish <- read_csv("banco/fish.csv")
 
 fish <- within(fish, {
@@ -165,6 +169,17 @@ fish <- within(fish, {
   LIVE_BAIT <- factor(LIVE_BAIT)
   CAMPER <- factor(CAMPER)
 })
+
+# fish <- fish %>% 
+  # mutate(id = row_number())#Check IDs
+# head(fish$id)#Create training set
+
+# fish_train <- fish %>% 
+#   sample_frac(.70)#Create test set
+# 
+# fish_test  <- anti_join(fish, fish_train, by = 'id')
+# fish <- fish_train
+
 ```
 
 ```{r, results='hold'}
@@ -175,9 +190,9 @@ fish <- within(fish, {
 Pelo histograma da Figura 1, nota-se um número elevado de zeros, o que é um indicativo de que um modelo ZIP provavelmente se ajuste melhor aos dados. 
 
 
-```{r fig.height=2.5, eval=F}
+```{r, eval=F, fig.height=3, fig.width=5, fig.cap="Histograma de frequências do número de peixes capturados (variável resposta)."}
 ggplot(fish, aes(FISH_COUNT)) + 
-  geom_histogram(col="grey", bins=50) +
+  geom_histogram(col="grey", bins=10) +
   scale_x_discrete(limits=seq(0, 150, 10)) +
   theme_bw() +
   ylab("Frequência") +
@@ -199,15 +214,15 @@ rd <- glm(FISH_COUNT ~ CHILDREN + CAMPER + PERSONS, data = fish, family = poisso
 disp <- dispersiontest(rd,trafo=1)
 ```
 
-Utilizando o teste de superdispersão proposto por @cameron, chegamos à conclusão de que existe superdispersão nos dados ($z \approx 1,8573, \ \alpha \approx 10,6243, \ p-valor \approx 0,03163$). Como a suposição de equidispersão não é satisfeita, não podemos ajustar um modelo de regressão de Poisson padrão. Pelos resultado do teste de Voung e da Figura 1, temos indícios que a superdispersão é causada pelo excesso de zeros na variável resposta (`FISH_COUNT`).
+Utilizando o teste de superdispersão proposto por @cameron, chegamos à conclusão de que existe superdispersão nos dados ($z \approx 1,8573, \ \alpha \approx 10,6243, \ p-valor \approx 0,03163$). Como a suposição de equidispersão não é satisfeita, não podemos ajustar um modelo de regressão de Poisson padrão. Pelos resultado do teste de superdispersão e com o gráfico da Figura 1, temos indícios que a superdispersão é causada pelo excesso de zeros na variável resposta (`FISH_COUNT`).
 
-Ajustando um modelo ZIP com as variáveis explicativas `CHILDREN` e `CAMPER` no modelo de contagem e  `PERSONS` no modelo de zeros, chegamos aos resultados apresentados na Tabela 1.
+Ajustando um modelo ZIP com as variáveis covariáveis `CHILDREN` e `CAMPER` no modelo de contagem e  `PERSONS` no modelo de zeros, chegamos aos resultados apresentados na Tabela 1. Os intervalos de confiança dos parâmetros foram calculados com base na normalidade assintótica destes e a estimação dos parâmetros foi feita através da maximização da função de log-verossimilhança usando o algoritmo EM, como descrito em @lambert1992zero.
 
 ```{r}
 require(ggplot2)
 require(pscl)
-require(boot)
-m1 <- zeroinfl(FISH_COUNT ~ CHILDREN + CAMPER | PERSONS, data = fish)
+# require(boot)
+m1 <- zeroinfl(FISH_COUNT ~ CHILDREN + CAMPER| PERSONS, data = fish)
 ```
 
 
@@ -225,6 +240,7 @@ zeros <- sum_m1[["coefficients"]][["zero"]] %>%
   rename("p-valor"="Pr(>|z|)") %>% 
   mutate(Parametro = c("Intercepto", "PERSONS"))
 
+tab_resultados <- bind_rows(count, zeros)
 ```
 
 
@@ -241,20 +257,41 @@ zeros <- sum_m1[["coefficients"]][["zero"]] %>%
 
 ## compare with normal based approximation
 ic <- confint(m1)
+ic1 <- as_tibble(ic)
 # kable(ic, caption="Intervalo de confiança dos parâmetros")
 
-Estimate <- c(1.5979, -1.0428, 0.8340, 1.2974, -0.5643)
-Std.Error <- c( 0.0855, 0.1000, 0.0936, 0.3739, 0.1630)
-Z.Value <- c(18.6804, -10.4296, 8.9079, 3.4705, -3.4630)
-P.Valor <- c("<0.001","<0.001","<0.001","5e-04","5e-04")
-Parametro <- c( "Intercepto", "CHILDREN", "CAMPER (1)", "Intercepto", "PEARSONS")
-Porcento2.5 <- c(1.4302, -1.2388, 0.6505, 0.5647, -0.8838)
-Porcento97.5 <- c(1.7655, -0.8469, 1.0175, 2.0302, -0.2449)
-Tabela <- data.frame(Estimate,Std.Error,Z.Value,P.Valor,Parametro,Porcento2.5,Porcento97.5)
-kable(Tabela, caption = "Nome da tabela.")
+tab_resultados  <- bind_cols(tab_resultados, ic1) %>% 
+  select(Parametro, Estimate, `Std. Error`, `z value`, `p-valor`, `2.5 %`, `97.5 %`) %>% 
+  rename(Estimativa=Estimate, `Erro padrão` = `Std. Error`, `Estatística do teste` = `z value`) %>% 
+  mutate(`IC(95%)`=paste("[", round(`2.5 %`, 4), "; ",round(`97.5 %`, 4), "]")) %>% 
+  select(-c(`2.5 %`, `97.5 %`))
+
+# Estimate <- c(1.5979, -1.0428, 0.8340, 1.2974, -0.5643)
+# Std.Error <- c( 0.0855, 0.1000, 0.0936, 0.3739, 0.1630)
+# Z.Value <- c(18.6804, -10.4296, 8.9079, 3.4705, -3.4630)
+# P.Valor <- c("<0.001","<0,001","<0,001","5e-04","5e-04")
+# Parametro <- c( "Intercepto", "CHILDREN", "CAMPER (1)", "Intercepto", "PEARSONS")
+# Porcento2.5 <- c(1.4302, -1.2388, 0.6505, 0.5647, -0.8838)
+# Porcento97.5 <- c(1.7655, -0.8469, 1.0175, 2.0302, -0.2449)
+# Tabela <- data.frame(Estimate,Std.Error,Z.Value,P.Valor,Parametro,Porcento2.5,Porcento97.5) %>% 
+#   as_tibble() %>% 
+#   rename(Estimativa = Estimate, `Erro padrão` = Std.Error, Z = Z.Value, 
+#          `p-valor`=P.Valor, `Parâmetro`=Parametro, `IC(2,5%)`=Porcento2.5, `IC(97,5%)`=Porcento97.5) %>% 
+#   select(`Parâmetro`, Estimativa, `Erro padrão`, Z, `p-valor`, `IC(2,5%)`, `IC(97,5%)`)
+
+tab <- kable(tab_resultados, caption = "Estimativas do modelo ZIP proposto.", pvalor = T) %>% 
+  pack_rows("Regressão Logística", 4, 5) %>% 
+  pack_rows("Regressão de Poisson", 1, 3)
+
+tab
+
 ```
 
+O parâmetro `CAMPER(1)` representa quando foi utilizado um guia. Como $e^{0,8340} = 2,30251$, podemos afirmar que, mantendo as demais variáveis fixas, a média de peixes capturados quando os visitantes do parque são acompanhados por um guia é aproximandamente 2,3 vezes maior do que quando não são. 
 
+Com a estimativa de `CHILDREN`, temos que o número de crianças afeta negativamente a média de peixes capturados. Mantendo as demais covariáveis fixas, o aumento em uma unidade no número de crianças representa um decréscimo na média de peixes capturados.
+
+A estimativa do parâmetro `PERSONS` no modelo de regressão logística representa um descréscimo, $e^{-0,5643} = 0,5687$, no número de peixes capturados. Ou seja, para cada uma pessoa a mais no grupo, são capturados 0,5 vezes menos peixes.
 
 <!-- Todos os parâmetros em ambos os modelos são significantes. Podemos testar se o modelo ZIP se ajusta melhor que o modelo sem intercepto, com um teste qui-quadrado da diferença do log da verossimilhança entre o modelo completo e o modelo nulo (somente o intercepto). -->
 
@@ -274,11 +311,34 @@ mnull <- update(m1, . ~ 1)
 p <- pchisq(2 * (logLik(m1) - logLik(mnull)), df = 3, lower.tail = FALSE)
 ```
 
-Com o teste qui-quadrado baseado no log das verossimilhanças **definido em...** podemos testar a hipótese que o modelo ZIP ajustado é superior ao modelo somente com o intercepto. Com um p-valor < 0,0001, temos evidências para afirmar que o modelo ajustado é superior ao modelo somente com intercepto.
+Com o teste qui-quadrado, baseado no log das verossimilhanças, podemos testar a hipótese que o modelo ZIP ajustado é superior ao modelo somente com o intercepto. Com um $p-valor < 0,0001$, temos evidências para afirmar que o modelo ajustado é superior ao modelo somente com intercepto.
 
-**incident risk ratio (IRR) for the Poisson model and odds ratio (OR) for the logistic (zero inflation) model.**
+```{r, fig.height=4, fig.cap="Predição usando o modelo ZIP. Usando um guia à direita e não usando à esquerda."}
+newdata1 <- expand.grid(0:3, factor(0:1), 1:4)
+colnames(newdata1) <- c("CHILDREN", "CAMPER", "PERSONS")
+newdata1 <- subset(newdata1, subset=(CHILDREN<=PERSONS))
+newdata1$phat <- predict(m1, newdata1)
+
+newdata1 %>% 
+  mutate(PERSONS=as.factor(PERSONS)) %>%
+  ggplot(aes(x = CHILDREN, y = phat, colour = PERSONS)) +
+  geom_point() +
+  geom_line() +
+  facet_wrap(~CAMPER) +
+  labs(x = "Número de crianças", y = "Número de peixes capturados (preditos)") +
+  theme_bw()
+```
+
+Na Figura 2 podemos ver como o modelo se comporta em termos de predição. À esquerda estão as predições para grupos que não usam guias e à direita para grupos que usam guias. Também podemos ver as diferenças causadas pelo número de pessoas e pelo número de crianças nos grupos.
 
 # Conclusões
+
+A aplicação apresentada dá resultados condizentes com a metodologia descrita. Ao longo deste trabalho somos guiados pela base metodológica, chegando a resultados satisfatórios e podendo predizer o número de peixes capturados com base nas covariáveis, enquanto acomodamos o excesso de zeros na variável resposta (número de peixes capturados).
+
+A Figura 2 faz muito sentido prático, sendo compreensível que grupos com guias consigam mais capturas. Também faz sentido que grupos com crianças capturem menos peixes, já que elas acabam fazendo mais barulho perto da água. Por fim, quanto mais pessoas presentes no grupo, mais pescadores simultâneos e, portanto, mais capturas.
+
+A melhor combinação para se capturar mais peixes parece ser, menos crianças, mais adultos e auxílio de um guia.
+
 
 # Referências
 

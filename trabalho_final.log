@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.7.3)  3 JUL 2021 19:52
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.7.3)  4 JUL 2021 19:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1359,57 +1359,60 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 141
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 7.665pt on input line 172.
+(Font)              scaled to size 7.665pt on input line 165.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 5.475pt on input line 172.
+(Font)              scaled to size 5.475pt on input line 165.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.95099pt on input line 172.
+(Font)              scaled to size 10.95099pt on input line 165.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.66568pt on input line 172.
+(Font)              scaled to size 7.66568pt on input line 165.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.4755pt on input line 172.
+(Font)              scaled to size 5.4755pt on input line 165.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 10.94882pt on input line 172.
+(Font)              scaled to size 10.94882pt on input line 165.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.66417pt on input line 172.
+(Font)              scaled to size 7.66417pt on input line 165.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.47441pt on input line 172.
+(Font)              scaled to size 5.47441pt on input line 165.
 [1
 
-]
+] [2]
 File: trabalho_final_files/figure-latex/unnamed-chunk-4-1.pdf Graphic file (typ
 e pdf)
 <use trabalho_final_files/figure-latex/unnamed-chunk-4-1.pdf>
-[2]
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 304.
+(Font)              scaled to size 10.0pt on input line 318.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 304.
+(Font)              scaled to size 7.0pt on input line 318.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 304.
+(Font)              scaled to size 5.0pt on input line 318.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.00092pt on input line 304.
+(Font)              scaled to size 10.00092pt on input line 318.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.00064pt on input line 304.
+(Font)              scaled to size 7.00064pt on input line 318.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.00046pt on input line 304.
+(Font)              scaled to size 5.00046pt on input line 318.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 9.99893pt on input line 304.
+(Font)              scaled to size 9.99893pt on input line 318.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 6.99925pt on input line 304.
+(Font)              scaled to size 6.99925pt on input line 318.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 4.99947pt on input line 304.
-[3] [4] (./trabalho_final.aux)
+(Font)              scaled to size 4.99947pt on input line 318.
+[3]
+File: trabalho_final_files/figure-latex/unnamed-chunk-11-1.pdf Graphic file (ty
+pe pdf)
+<use trabalho_final_files/figure-latex/unnamed-chunk-11-1.pdf>
+[4] [5] (./trabalho_final.aux)
 Package rerunfilecheck Info: File `trabalho_final.out' has not changed.
-(rerunfilecheck)             Checksum: B91BFD19EA6B4827DBBFA549FAFF3388;1281.
+(rerunfilecheck)             Checksum: 73EF1F441B1BD6ACC170DCB2C931D282;1148.
  ) 
 Here is how much of TeX's memory you used:
- 40936 strings out of 478451
- 935888 string characters out of 5858535
- 1505339 words of memory out of 5000000
- 60595 multiletter control sequences out of 15000+600000
- 412903 words of font info for 101 fonts, out of 8000000 for 9000
+ 40948 strings out of 478451
+ 936523 string characters out of 5858535
+ 1505425 words of memory out of 5000000
+ 60605 multiletter control sequences out of 15000+600000
+ 412911 words of font info for 102 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  108i,11n,120p,751b,479s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on trabalho_final.pdf (4 pages).
+Output written on trabalho_final.pdf (5 pages).
