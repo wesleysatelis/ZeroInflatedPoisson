@@ -304,7 +304,7 @@ p1 <- glm(FISH_COUNT ~ CHILDREN + CAMPER, family = poisson, data = fish)
 voung <- vuong(p1, m1)
 ```
 
-Podemos ainda nos perguntar se o modelo ajustado realmente é superior à regressão padrão de Poisson. Comparando os dois ajustes com o teste de Voung chegamos a um $p-valor \approx 0,00018$, evidenciando que o modelo ZIP é superior ao modelo de Poisson padrão.
+Podemos ainda nos perguntar se o modelo ajustado realmente é superior à regressão padrão de Poisson. Comparando os dois ajustes com o teste de Vuong (@vuong1989likelihood) chegamos a um $p-valor \approx 0,00018$, evidenciando que o modelo ZIP é superior ao modelo de Poisson padrão.
 
 ```{r}
 mnull <- update(m1, . ~ 1)
