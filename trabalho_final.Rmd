@@ -19,10 +19,11 @@ bibliography: "referencias.bib"
 biblio-style: "plain"
 link-citations: true
 colorlinks: false
-# lang: pt-BR
+lang: pt-BR
 fontsize: 11pt
 
 header-includes:
+- \usepackage[portuguese]{babel}
 - \usepackage{lineno}
 # - \linenumbers
 - \usepackage{subcaption}

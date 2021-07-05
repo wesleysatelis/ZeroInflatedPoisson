@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.7.3)  4 JUL 2021 20:06
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.7.3)  4 JUL 2021 21:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -358,22 +358,50 @@ LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count303
 \calc@Cskip=\skip58
-) (/home/wesley/.TinyTeX/texmf-dist/tex/latex/lineno/lineno.sty
+) (/home/wesley/.TinyTeX/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2021/06/28 3.61 The Babel package
+(/home/wesley/.TinyTeX/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2021/06/28 3.61 Babel common definitions
+\babel@savecnt=\count304
+\U@D=\dimen167
+\l@unhyphenated=\language3
+(/home/wesley/.TinyTeX/texmf-dist/tex/generic/babel/xebabel.def (/home/wesley/.
+TinyTeX/texmf-dist/tex/generic/babel/txtbabel.def))
+\bbl@readstream=\read2
+)
+\bbl@dirlevel=\count305
+(/home/wesley/.TinyTeX/texmf-dist/tex/generic/babel-portuges/brazilian.ldf
+Language: portuges 2021/02/04 v1.2s Portuguese support from the babel system
+
+Package babel Warning: No hyphenation patterns were preloaded for
+(babel)                the language 'Portuguese' into the format.
+(babel)                Please, configure your TeX system to add them and
+(babel)                rebuild the format. Now I will use the patterns
+(babel)                preloaded for \language=0 instead on input line 53.
+
+Package babel Info: Hyphen rules for 'portuges' set to \l@english
+(babel)             (\language0). Reported on input line 54.
+Package babel Info: Hyphen rules for 'brazilian' set to \l@english
+(babel)             (\language0). Reported on input line 111.
+Package babel Info: Making " an active character on input line 143.
+) (/home/wesley/.TinyTeX/texmf-dist/tex/generic/babel-portuges/portuguese.ldf
+Language: portuges 2021/02/04 v1.2s Portuguese support from the babel system
+)) (/home/wesley/.TinyTeX/texmf-dist/tex/latex/lineno/lineno.sty
 Package: lineno 2005/11/02 line numbers on paragraphs v4.41
 Invalid UTF-8 byte or sequence at line 296 replaced by U+FFFD.
-\linenopenalty=\count304
+\linenopenalty=\count306
 \output=\toks23
-\linenoprevgraf=\count305
-\linenumbersep=\dimen167
-\linenumberwidth=\dimen168
-\c@linenumber=\count306
-\c@pagewiselinenumber=\count307
-\c@LN@truepage=\count308
-\c@internallinenumber=\count309
-\c@internallinenumbers=\count310
-\quotelinenumbersep=\dimen169
-\bframerule=\dimen170
-\bframesep=\dimen171
+\linenoprevgraf=\count307
+\linenumbersep=\dimen168
+\linenumberwidth=\dimen169
+\c@linenumber=\count308
+\c@pagewiselinenumber=\count309
+\c@LN@truepage=\count310
+\c@internallinenumber=\count311
+\c@internallinenumbers=\count312
+\quotelinenumbersep=\dimen170
+\bframerule=\dimen171
+\bframesep=\dimen172
 \bframebox=\box54
 LaTeX Info: Redefining \\ on input line 3056.
 ) (/home/wesley/.TinyTeX/texmf-dist/tex/latex/caption/subcaption.sty
@@ -382,21 +410,21 @@ Package: subcaption 2020/10/07 v1.3j Sub-captions (AR)
 Package: caption 2020/10/26 v3.5g Customizing captions (AR)
 (/home/wesley/.TinyTeX/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
-\captionmargin=\dimen172
-\captionmargin@=\dimen173
-\captionwidth=\dimen174
-\caption@tempdima=\dimen175
-\caption@indent=\dimen176
-\caption@parindent=\dimen177
-\caption@hangindent=\dimen178
+\captionmargin=\dimen173
+\captionmargin@=\dimen174
+\captionwidth=\dimen175
+\caption@tempdima=\dimen176
+\caption@indent=\dimen177
+\caption@parindent=\dimen178
+\caption@hangindent=\dimen179
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count311
-\c@continuedfloat=\count312
+\c@caption@flags=\count313
+\c@continuedfloat=\count314
 Package caption Info: hyperref package is loaded.
 )
-\c@subfigure=\count313
-\c@subtable=\count314
+\c@subfigure=\count315
+\c@subtable=\count316
 ) (/home/wesley/.TinyTeX/texmf-dist/tex/latex/koma-script/scrextend.sty
 Package: scrextend 2021/06/25 v3.34 KOMA-Script package (extend other classes w
 ith features of KOMA-Script classes)
@@ -427,8 +455,8 @@ LaTeX Warning: Command \@footnotemark  has changed.
 yTeX/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/home/wesley/.TinyTeX/texmf
 -dist/tex/generic/pgf/utilities/pgfutil-common.tex
 \pgfutil@everybye=\toks24
-\pgfutil@tempdima=\dimen179
-\pgfutil@tempdimb=\dimen180
+\pgfutil@tempdima=\dimen180
+\pgfutil@tempdimb=\dimen181
 
 (/home/wesley/.TinyTeX/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-list
 s.tex)) (/home/wesley/.TinyTeX/texmf-dist/tex/generic/pgf/utilities/pgfutil-lat
@@ -451,26 +479,26 @@ Package: pgfsys 2021/05/15 v3.1.9a (3.1.9a)
 e.tex
 \pgfkeys@tmptoks=\toks27
 ))
-\pgf@x=\dimen181
-\pgf@y=\dimen182
-\pgf@xa=\dimen183
-\pgf@ya=\dimen184
-\pgf@xb=\dimen185
-\pgf@yb=\dimen186
-\pgf@xc=\dimen187
-\pgf@yc=\dimen188
-\pgf@xd=\dimen189
-\pgf@yd=\dimen190
+\pgf@x=\dimen182
+\pgf@y=\dimen183
+\pgf@xa=\dimen184
+\pgf@ya=\dimen185
+\pgf@xb=\dimen186
+\pgf@yb=\dimen187
+\pgf@xc=\dimen188
+\pgf@yc=\dimen189
+\pgf@xd=\dimen190
+\pgf@yd=\dimen191
 \w@pgf@writea=\write3
-\r@pgf@reada=\read2
-\c@pgf@counta=\count315
-\c@pgf@countb=\count316
-\c@pgf@countc=\count317
-\c@pgf@countd=\count318
+\r@pgf@reada=\read3
+\c@pgf@counta=\count317
+\c@pgf@countb=\count318
+\c@pgf@countc=\count319
+\c@pgf@countd=\count320
 \t@pgf@toka=\toks28
 \t@pgf@tokb=\toks29
 \t@pgf@tokc=\toks30
-\pgf@sys@id@count=\count319
+\pgf@sys@id@count=\count321
 (/home/wesley/.TinyTeX/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2021/05/15 v3.1.9a (3.1.9a)
 )
@@ -486,13 +514,13 @@ File: pgfsys-dvipdfmx.def 2021/05/15 v3.1.9a (3.1.9a)
 .def
 File: pgfsys-common-pdf.def 2021/05/15 v3.1.9a (3.1.9a)
 )
-\pgfsys@objnum=\count320
+\pgfsys@objnum=\count322
 )))
 (/home/wesley/.TinyTeX/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.co
 de.tex
 File: pgfsyssoftpath.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfsyssoftpath@smallbuffer@items=\count321
-\pgfsyssoftpath@bigbuffer@items=\count322
+\pgfsyssoftpath@smallbuffer@items=\count323
+\pgfsyssoftpath@bigbuffer@items=\count324
 )
 (/home/wesley/.TinyTeX/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.co
 de.tex
@@ -504,8 +532,8 @@ Package: pgfcore 2021/05/15 v3.1.9a (3.1.9a)
 wesley/.TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex (/home/wes
 ley/.TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (/home/wesle
 y/.TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen191
-\pgfmath@count=\count323
+\pgfmath@dimen=\dimen192
+\pgfmath@count=\count325
 \pgfmath@box=\box56
 \pgfmath@toks=\toks31
 \pgfmath@stack@operand=\toks32
@@ -530,37 +558,37 @@ de.tex)
 (/home/wesley/.TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integer
 arithmetics.code.tex))) (/home/wesley/.TinyTeX/texmf-dist/tex/generic/pgf/math/
 pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count324
+\c@pgfmathroundto@lastzeros=\count326
 )) (/home/wesley/.TinyTeX/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
 (/home/wesley/.TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code
 .tex
 File: pgfcorepoints.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@picminx=\dimen192
-\pgf@picmaxx=\dimen193
-\pgf@picminy=\dimen194
-\pgf@picmaxy=\dimen195
-\pgf@pathminx=\dimen196
-\pgf@pathmaxx=\dimen197
-\pgf@pathminy=\dimen198
-\pgf@pathmaxy=\dimen199
-\pgf@xx=\dimen256
-\pgf@xy=\dimen257
-\pgf@yx=\dimen258
-\pgf@yy=\dimen259
-\pgf@zx=\dimen260
-\pgf@zy=\dimen261
+\pgf@picminx=\dimen193
+\pgf@picmaxx=\dimen194
+\pgf@picminy=\dimen195
+\pgf@picmaxy=\dimen196
+\pgf@pathminx=\dimen197
+\pgf@pathmaxx=\dimen198
+\pgf@pathminy=\dimen199
+\pgf@pathmaxy=\dimen256
+\pgf@xx=\dimen257
+\pgf@xy=\dimen258
+\pgf@yx=\dimen259
+\pgf@yy=\dimen260
+\pgf@zx=\dimen261
+\pgf@zy=\dimen262
 )
 (/home/wesley/.TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstru
 ct.code.tex
 File: pgfcorepathconstruct.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@path@lastx=\dimen262
-\pgf@path@lasty=\dimen263
+\pgf@path@lastx=\dimen263
+\pgf@path@lasty=\dimen264
 )
 (/home/wesley/.TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.c
 ode.tex
 File: pgfcorepathusage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@shorten@end@additional=\dimen264
-\pgf@shorten@start@additional=\dimen265
+\pgf@shorten@end@additional=\dimen265
+\pgf@shorten@start@additional=\dimen266
 )
 (/home/wesley/.TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code
 .tex
@@ -568,19 +596,19 @@ File: pgfcorescopes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgfpic=\box57
 \pgf@hbox=\box58
 \pgf@layerbox@main=\box59
-\pgf@picture@serial@count=\count325
+\pgf@picture@serial@count=\count327
 )
 (/home/wesley/.TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstat
 e.code.tex
 File: pgfcoregraphicstate.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgflinewidth=\dimen266
+\pgflinewidth=\dimen267
 )
 (/home/wesley/.TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformat
 ions.code.tex
 File: pgfcoretransformations.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@pt@x=\dimen267
-\pgf@pt@y=\dimen268
-\pgf@pt@temp=\dimen269
+\pgf@pt@x=\dimen268
+\pgf@pt@y=\dimen269
+\pgf@pt@temp=\dimen270
 )
 (/home/wesley/.TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.
 tex
@@ -597,14 +625,14 @@ File: pgfcorepathprocessing.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 (/home/wesley/.TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code
 .tex
 File: pgfcorearrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfarrowsep=\dimen270
+\pgfarrowsep=\dimen271
 )
 (/home/wesley/.TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.
 tex
 File: pgfcoreshade.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@max=\dimen271
-\pgf@sys@shading@range@num=\count326
-\pgf@shadingcount=\count327
+\pgf@max=\dimen272
+\pgf@sys@shading@range@num=\count328
+\pgf@shadingcount=\count329
 )
 (/home/wesley/.TinyTeX/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.
 tex
@@ -643,8 +671,8 @@ File: pgfmoduleplot.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 (/home/wesley/.TinyTeX/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0
 -65.sty
 Package: pgfcomp-version-0-65 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@nodesepstart=\dimen272
-\pgf@nodesepend=\dimen273
+\pgf@nodesepstart=\dimen273
+\pgf@nodesepend=\dimen274
 )
 (/home/wesley/.TinyTeX/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1
 -18.sty
@@ -657,8 +685,8 @@ ist/tex/generic/pgf/math/pgfmath.code.tex)) (/home/wesley/.TinyTeX/texmf-dist/t
 ex/generic/pgf/utilities/pgffor.code.tex
 Package: pgffor 2021/05/15 v3.1.9a (3.1.9a)
 (/home/wesley/.TinyTeX/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
-\pgffor@iter=\dimen274
-\pgffor@skip=\dimen275
+\pgffor@iter=\dimen275
+\pgffor@skip=\dimen276
 \pgffor@stack=\toks34
 \pgffor@toks=\toks35
 ))
@@ -669,34 +697,34 @@ Package: tikz 2021/05/15 v3.1.9a (3.1.9a)
 (/home/wesley/.TinyTeX/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandl
 ers.code.tex
 File: pgflibraryplothandlers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@plot@mark@count=\count328
-\pgfplotmarksize=\dimen276
+\pgf@plot@mark@count=\count330
+\pgfplotmarksize=\dimen277
 )
-\tikz@lastx=\dimen277
-\tikz@lasty=\dimen278
-\tikz@lastxsaved=\dimen279
-\tikz@lastysaved=\dimen280
-\tikz@lastmovetox=\dimen281
-\tikz@lastmovetoy=\dimen282
-\tikzleveldistance=\dimen283
-\tikzsiblingdistance=\dimen284
+\tikz@lastx=\dimen278
+\tikz@lasty=\dimen279
+\tikz@lastxsaved=\dimen280
+\tikz@lastysaved=\dimen281
+\tikz@lastmovetox=\dimen282
+\tikz@lastmovetoy=\dimen283
+\tikzleveldistance=\dimen284
+\tikzsiblingdistance=\dimen285
 \tikz@figbox=\box62
 \tikz@figbox@bg=\box63
 \tikz@tempbox=\box64
 \tikz@tempbox@bg=\box65
-\tikztreelevel=\count329
-\tikznumberofchildren=\count330
-\tikznumberofcurrentchild=\count331
-\tikz@fig@count=\count332
+\tikztreelevel=\count331
+\tikznumberofchildren=\count332
+\tikznumberofcurrentchild=\count333
+\tikz@fig@count=\count334
 
 (/home/wesley/.TinyTeX/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.
 tex
 File: pgfmodulematrix.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfmatrixcurrentrow=\count333
-\pgfmatrixcurrentcolumn=\count334
-\pgf@matrix@numberofcolumns=\count335
+\pgfmatrixcurrentrow=\count335
+\pgfmatrixcurrentcolumn=\count336
+\pgf@matrix@numberofcolumns=\count337
 )
-\tikz@expandcount=\count336
+\tikz@expandcount=\count338
 
 (/home/wesley/.TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/
 tikzlibrarytopaths.code.tex
@@ -709,9 +737,9 @@ Package: pgfplots 2021/05/15 v1.18.1 Data Visualization (1.18.1)
 \t@pgfplots@toka=\toks36
 \t@pgfplots@tokb=\toks37
 \t@pgfplots@tokc=\toks38
-\pgfplots@tmpa=\dimen285
-\c@pgfplots@coordindex=\count337
-\c@pgfplots@scanlineindex=\count338
+\pgfplots@tmpa=\dimen286
+\c@pgfplots@coordindex=\count339
+\c@pgfplots@scanlineindex=\count340
 
 (/home/wesley/.TinyTeX/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.c
 ode.tex))
@@ -729,13 +757,13 @@ ststructure.code.tex)
 ststructureext.code.tex)
 (/home/wesley/.TinyTeX/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsar
 ray.code.tex
-\c@pgfplotsarray@tmp=\count339
+\c@pgfplotsarray@tmp=\count341
 )
 (/home/wesley/.TinyTeX/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsma
 trix.code.tex)
 (/home/wesley/.TinyTeX/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstablesh
 ared.code.tex
-\c@pgfplotstable@counta=\count340
+\c@pgfplotstable@counta=\count342
 \t@pgfplotstable@a=\toks39
 )
 (/home/wesley/.TinyTeX/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsde
@@ -748,13 +776,13 @@ que.code.tex)
 ode.tex)
 (/home/wesley/.TinyTeX/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.
 surfshading.code.tex
-\c@pgfplotslibrarysurf@no=\count341
+\c@pgfplotslibrarysurf@no=\count343
 
 (/home/wesley/.TinyTeX/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.s
 urfshading.pgfsys-xetex.def
 (/home/wesley/.TinyTeX/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.s
 urfshading.pgfsys-dvipdfmx.def
-\c@pgfplotslibrarysurf@streamlen=\count342
+\c@pgfplotslibrarysurf@streamlen=\count344
 ))))
 (/home/wesley/.TinyTeX/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.co
 de.tex
@@ -782,14 +810,14 @@ ex)
 tikzlibrarydecorations.code.tex
 (/home/wesley/.TinyTeX/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.
 code.tex
-\pgfdecoratedcompleteddistance=\dimen286
-\pgfdecoratedremainingdistance=\dimen287
-\pgfdecoratedinputsegmentcompleteddistance=\dimen288
-\pgfdecoratedinputsegmentremainingdistance=\dimen289
-\pgf@decorate@distancetomove=\dimen290
-\pgf@decorate@repeatstate=\count343
-\pgfdecorationsegmentamplitude=\dimen291
-\pgfdecorationsegmentlength=\dimen292
+\pgfdecoratedcompleteddistance=\dimen287
+\pgfdecoratedremainingdistance=\dimen288
+\pgfdecoratedinputsegmentcompleteddistance=\dimen289
+\pgfdecoratedinputsegmentremainingdistance=\dimen290
+\pgf@decorate@distancetomove=\dimen291
+\pgf@decorate@repeatstate=\count345
+\pgfdecorationsegmentamplitude=\dimen292
+\pgfdecorationsegmentlength=\dimen293
 )
 \tikz@lib@dec@box=\box66
 )
@@ -803,13 +831,13 @@ tikzlibrarydecorations.pathreplacing.code.tex
 arydecorations.pathreplacing.code.tex))
 (/home/wesley/.TinyTeX/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots
 .contourlua.code.tex)
-\pgfplots@numplots=\count344
-\pgfplots@xmin@reg=\dimen293
-\pgfplots@xmax@reg=\dimen294
-\pgfplots@ymin@reg=\dimen295
-\pgfplots@ymax@reg=\dimen296
-\pgfplots@zmin@reg=\dimen297
-\pgfplots@zmax@reg=\dimen298
+\pgfplots@numplots=\count346
+\pgfplots@xmin@reg=\dimen294
+\pgfplots@xmax@reg=\dimen295
+\pgfplots@ymin@reg=\dimen296
+\pgfplots@ymax@reg=\dimen297
+\pgfplots@zmin@reg=\dimen298
+\pgfplots@zmax@reg=\dimen299
 )
 (/home/wesley/.TinyTeX/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/
 tikzlibraryplotmarks.code.tex
@@ -834,56 +862,56 @@ File: tikzlibraryarrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 (/home/wesley/.TinyTeX/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.co
 de.tex
 File: pgflibraryarrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\arrowsize=\dimen299
+\arrowsize=\dimen300
 )) (/home/wesley/.TinyTeX/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count345
+\c@float@type=\count347
 \float@exts=\toks40
 \float@box=\box67
 \@float@everytoks=\toks41
 \@floatcapt=\box68
 ) (/home/wesley/.TinyTeX/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen300
-\lightrulewidth=\dimen301
-\cmidrulewidth=\dimen302
-\belowrulesep=\dimen303
-\belowbottomsep=\dimen304
-\aboverulesep=\dimen305
-\abovetopsep=\dimen306
-\cmidrulesep=\dimen307
-\cmidrulekern=\dimen308
-\defaultaddspace=\dimen309
-\@cmidla=\count346
-\@cmidlb=\count347
-\@aboverulesep=\dimen310
-\@belowrulesep=\dimen311
-\@thisruleclass=\count348
-\@lastruleclass=\count349
-\@thisrulewidth=\dimen312
+\heavyrulewidth=\dimen301
+\lightrulewidth=\dimen302
+\cmidrulewidth=\dimen303
+\belowrulesep=\dimen304
+\belowbottomsep=\dimen305
+\aboverulesep=\dimen306
+\abovetopsep=\dimen307
+\cmidrulesep=\dimen308
+\cmidrulekern=\dimen309
+\defaultaddspace=\dimen310
+\@cmidla=\count348
+\@cmidlb=\count349
+\@aboverulesep=\dimen311
+\@belowrulesep=\dimen312
+\@thisruleclass=\count350
+\@lastruleclass=\count351
+\@thisrulewidth=\dimen313
 ) (/home/wesley/.TinyTeX/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2021-05-07 v4.16 Multi-page Table package (DPC)
 \LTleft=\skip59
 \LTright=\skip60
 \LTpre=\skip61
 \LTpost=\skip62
-\LTchunksize=\count350
-\LTcapwidth=\dimen313
+\LTchunksize=\count352
+\LTcapwidth=\dimen314
 \LT@head=\box69
 \LT@firsthead=\box70
 \LT@foot=\box71
 \LT@lastfoot=\box72
 \LT@gbox=\box73
-\LT@cols=\count351
-\LT@rows=\count352
-\c@LT@tables=\count353
-\c@LT@chunks=\count354
+\LT@cols=\count353
+\LT@rows=\count354
+\c@LT@tables=\count355
+\c@LT@chunks=\count356
 \LT@p@ftn=\toks42
 ) (/home/wesley/.TinyTeX/texmf-dist/tex/latex/tools/array.sty
 Package: array 2021/04/20 v2.5e Tabular extension package (FMi)
-\col@sep=\dimen314
+\col@sep=\dimen315
 \ar@mcellbox=\box74
-\extrarowheight=\dimen315
+\extrarowheight=\dimen316
 \NC@list=\toks43
 \extratabsurround=\skip63
 \backup@length=\skip64
@@ -891,13 +919,13 @@ Package: array 2021/04/20 v2.5e Tabular extension package (FMi)
 ) (/home/wesley/.TinyTeX/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
 \multirow@colwidth=\skip65
-\multirow@cntb=\count355
+\multirow@cntb=\count357
 \multirow@dima=\skip66
-\bigstrutjot=\dimen316
+\bigstrutjot=\dimen317
 ) (/home/wesley/.TinyTeX/texmf-dist/tex/latex/wrapfig/wrapfig.sty
-\wrapoverhang=\dimen317
-\WF@size=\dimen318
-\c@WF@wrappedlines=\count356
+\wrapoverhang=\dimen318
+\WF@size=\dimen319
+\c@WF@wrappedlines=\count358
 \WF@box=\box76
 \WF@everypar=\toks44
 Package: wrapfig 2003/01/31  v 3.6
@@ -917,25 +945,25 @@ Package: tabu 2019/01/11 v2.9 - flexible LaTeX tabulars (FC+tabu-fixed)
 (/home/wesley/.TinyTeX/texmf-dist/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box77
-\sift@deathcycles=\count357
-\@vwid@loff=\dimen319
-\@vwid@roff=\dimen320
+\sift@deathcycles=\count359
+\@vwid@loff=\dimen320
+\@vwid@roff=\dimen321
 )
-\c@taburow=\count358
-\tabu@nbcols=\count359
-\tabu@cnt=\count360
-\tabu@Xcol=\count361
-\tabu@alloc=\count362
-\tabu@nested=\count363
-\tabu@target=\dimen321
-\tabu@spreadtarget=\dimen322
-\tabu@naturalX=\dimen323
-\tabucolX=\dimen324
-\tabu@Xsum=\dimen325
-\extrarowdepth=\dimen326
-\abovetabulinesep=\dimen327
-\belowtabulinesep=\dimen328
-\tabustrutrule=\dimen329
+\c@taburow=\count360
+\tabu@nbcols=\count361
+\tabu@cnt=\count362
+\tabu@Xcol=\count363
+\tabu@alloc=\count364
+\tabu@nested=\count365
+\tabu@target=\dimen322
+\tabu@spreadtarget=\dimen323
+\tabu@naturalX=\dimen324
+\tabucolX=\dimen325
+\tabu@Xsum=\dimen326
+\extrarowdepth=\dimen327
+\abovetabulinesep=\dimen328
+\belowtabulinesep=\dimen329
+\tabustrutrule=\dimen330
 \tabu@thebody=\toks46
 \tabu@footnotes=\toks47
 \tabu@box=\box78
@@ -960,54 +988,159 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 \UL@hyphenbox=\box84
 \UL@skip=\skip70
 \UL@hook=\toks48
-\UL@height=\dimen330
-\UL@pe=\count364
-\UL@pixel=\dimen331
+\UL@height=\dimen331
+\UL@pe=\count366
+\UL@pixel=\dimen332
 \ULC@box=\box85
 Package: ulem 2019/11/18
-\ULdepth=\dimen332
+\ULdepth=\dimen333
 ) (/home/wesley/.TinyTeX/texmf-dist/tex/latex/makecell/makecell.sty
 Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
-\rotheadsize=\dimen333
-\c@nlinenum=\count365
+\rotheadsize=\dimen334
+\c@nlinenum=\count367
 \TeXr@lab=\toks49
-) (./trabalho_final.aux)
+) (/home/wesley/.TinyTeX/texmf-dist/tex/latex/polyglossia/polyglossia.sty
+Package: polyglossia 2021/04/12 v1.53 Modern multilingual typesetting with XeLa
+TeX and LuaLaTeX
+(/home/wesley/.TinyTeX/texmf-dist/tex/latex/makecmds/makecmds.sty
+Package: makecmds 2009/09/03 v1.0a extra command making commands
+) (/home/wesley/.TinyTeX/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
+(/home/wesley/.TinyTeX/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/home/wesley
+/.TinyTeX/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks50
+\XKV@tempa@toks=\toks51
+)
+\XKV@depth=\count368
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+\xpg@normalclass=\XeTeXcharclass1
+(/home/wesley/.TinyTeX/texmf-dist/tex/latex/polyglossia/gloss-latex.ldf
+File: gloss-latex.ldf polyglossia: module for default language
+The property list \polyglossia@langsetup contains the pairs (without outer
+braces):
+>  {latex/script}  =>  {latin}
+>  {latex/lcscript}  =>  {latin}
+>  {latex/scripttag}  =>  {}
+>  {latex/language}  =>  {Latex}
+>  {latex/langtag}  =>  {ENG}
+>  {latex/bcp47}  =>  {}
+>  {latex/hyphennames}  =>  {english}
+>  {latex/direction}  =>  {LR}
+>  {latex/hyphenmins}  =>  {2,3}
+>  {latex/frenchspacing}  =>  {false}
+>  {latex/indentfirst}  =>  {false}
+>  {latex/fontsetup}  =>  {true}
+>  {latex/envname}  =>  {latex}
+>  {latex/babelname}  =>  {latex}
+>  {latex/localnumeral}  =>  {polyglossia@C@localnumeral}
+>  {latex/Localnumeral}  =>  {polyglossia@C@localnumeral}.
+)
+Package polyglossia Info: Default language is latex.
+) (/home/wesley/.TinyTeX/texmf-dist/tex/latex/polyglossia/gloss-portuguese.ldf
+File: gloss-portuguese.ldf polyglossia: module for portuguese
+The property list \polyglossia@langsetup contains the pairs (without outer
+braces):
+>  {latex/script}  =>  {latin}
+>  {latex/lcscript}  =>  {latin}
+>  {latex/scripttag}  =>  {}
+>  {latex/language}  =>  {Latex}
+>  {latex/langtag}  =>  {ENG}
+>  {latex/bcp47}  =>  {}
+>  {latex/hyphennames}  =>  {english}
+>  {latex/direction}  =>  {LR}
+>  {latex/hyphenmins}  =>  {2,3}
+>  {latex/frenchspacing}  =>  {false}
+>  {latex/indentfirst}  =>  {false}
+>  {latex/fontsetup}  =>  {true}
+>  {latex/envname}  =>  {latex}
+>  {latex/babelname}  =>  {latex}
+>  {latex/localnumeral}  =>  {polyglossia@C@localnumeral}
+>  {latex/Localnumeral}  =>  {polyglossia@C@localnumeral}
+>  {portuguese/script}  =>  {latin}
+>  {portuguese/lcscript}  =>  {latin}
+>  {portuguese/scripttag}  =>  {}
+>  {portuguese/language}  =>  {Portuguese}
+>  {portuguese/langtag}  =>  {PTG}
+>  {portuguese/bcp47}  =>  {pt-PT}
+>  {portuguese/hyphennames}  =>  {portuges,portuguese}
+>  {portuguese/direction}  =>  {LR}
+>  {portuguese/hyphenmins}  =>  {2,3}
+>  {portuguese/frenchspacing}  =>  {false}
+>  {portuguese/indentfirst}  =>  {false}
+>  {portuguese/fontsetup}  =>  {true}
+>  {portuguese/envname}  =>  {portuguese}
+>  {portuguese/babelname}  =>  {portuges}
+>  {portuguese/localnumeral}  =>  {polyglossia@C@localnumeral}
+>  {portuguese/Localnumeral}  =>  {polyglossia@C@localnumeral}.
+Package polyglossia Info: Option: portuguese, variant=portuguese.
+)
+Package babel Info: Hyphen rules for 'brazil' set to \l@english
+(babel)             (\language0). Reported on input line 141.
+Package polyglossia Info: Option: portuguese, variant=brazilian.
+Package babel Info: Hyphen rules for 'brazil' set to \l@english
+(babel)             (\language0). Reported on input line 141.
+Package polyglossia Info: Option: portuguese, variant=brazilian.
+Package polyglossia Info: Default language is portuguese.
+Package babel Info: Hyphen rules for 'brazil' set to \l@english
+(babel)             (\language0). Reported on input line 141.
+Package polyglossia Info: Option: portuguese, variant=brazilian.
+(./trabalho_final.aux
+LaTeX Info: Redefining \rmfamily on input line 23.
+LaTeX Info: Redefining \sffamily on input line 23.
+LaTeX Info: Redefining \ttfamily on input line 23.
+Package babel Info: Hyphen rules for 'brazil' set to \l@english
+(babel)             (\language0). Reported on input line 27.
+Package polyglossia Info: Option: portuguese, variant=brazilian.
+Package babel Info: Hyphen rules for 'brazil' set to \l@english
+(babel)             (\language0). Reported on input line 27.
+Package polyglossia Info: Option: portuguese, variant=brazilian.
+LaTeX Info: Redefining \rmfamily on input line 27.
+LaTeX Info: Redefining \sffamily on input line 27.
+LaTeX Info: Redefining \ttfamily on input line 27.
+Package babel Info: Hyphen rules for 'brazil' set to \l@english
+(babel)             (\language0). Reported on input line 27.
+Package polyglossia Info: Option: portuguese, variant=brazilian.
+Package babel Info: Hyphen rules for 'brazil' set to \l@english
+(babel)             (\language0). Reported on input line 27.
+Package polyglossia Info: Option: portuguese, variant=brazilian.
+)
 \openout1 = `trabalho_final.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 139.
-LaTeX Font Info:    ... okay on input line 139.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 139.
-LaTeX Font Info:    ... okay on input line 139.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 139.
-LaTeX Font Info:    ... okay on input line 139.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 139.
-LaTeX Font Info:    ... okay on input line 139.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 139.
-LaTeX Font Info:    ... okay on input line 139.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 139.
-LaTeX Font Info:    ... okay on input line 139.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 139.
-LaTeX Font Info:    ... okay on input line 139.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 139.
-LaTeX Font Info:    ... okay on input line 139.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 139.
-LaTeX Font Info:    ... okay on input line 139.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 139.
-LaTeX Font Info:    ... okay on input line 139.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 152.
+LaTeX Font Info:    ... okay on input line 152.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 152.
+LaTeX Font Info:    ... okay on input line 152.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 152.
+LaTeX Font Info:    ... okay on input line 152.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 152.
+LaTeX Font Info:    ... okay on input line 152.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 152.
+LaTeX Font Info:    ... okay on input line 152.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 152.
+LaTeX Font Info:    ... okay on input line 152.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 152.
+LaTeX Font Info:    ... okay on input line 152.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 152.
+LaTeX Font Info:    ... okay on input line 152.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 152.
+LaTeX Font Info:    ... okay on input line 152.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 152.
+LaTeX Font Info:    ... okay on input line 152.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/lmr/m/n --> TU/lmr/m/n on input line 139.
+(Font)                  OT1/lmr/m/n --> TU/lmr/m/n on input line 152.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/lmr/m/it --> TU/lmr/m/it on input line 139.
+(Font)                  OT1/lmr/m/it --> TU/lmr/m/it on input line 152.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/lmr/bx/n --> TU/lmr/bx/n on input line 139.
+(Font)                  OT1/lmr/bx/n --> TU/lmr/bx/n on input line 152.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/lmss/m/n --> TU/lmss/m/n on input line 139.
+(Font)                  OT1/lmss/m/n --> TU/lmss/m/n on input line 152.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/bx/n --> TU/lmss/bx/n on input line 139.
+(Font)                  OT1/lmss/bx/n --> TU/lmss/bx/n on input line 152.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 139.
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/m/n on input line 152.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> TU/lmtt/bx/n on input line 139.
+(Font)                  OT1/lmtt/m/n --> TU/lmtt/bx/n on input line 152.
 
 Package fontspec Info: latinmodern-math scale = 0.9999967668407183.
 
@@ -1036,7 +1169,7 @@ pt=math;language=dflt;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(0)/m/n' will be
-(Font)              scaled to size 10.95pt on input line 139.
+(Font)              scaled to size 10.95pt on input line 152.
 
 Package fontspec Info: latinmodern-math scale = 0.9999967668407183.
 
@@ -1075,18 +1208,18 @@ pt=math;language=dflt;"
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 10.95pt on input line 139.
+(Font)              scaled to size 10.95pt on input line 152.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 139.
+(Font)              `operators' in the math version `normal' on input line 152.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/lmr/m/n --> TU/latinmodern-math.otf(1)/m/n on input
- line 139.
+ line 152.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 139.
+(Font)              `operators' in the math version `bold' on input line 152.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  OT1/lmr/bx/n --> TU/latinmodern-math.otf(1)/b/n on inpu
-t line 139.
+t line 152.
 
 Package fontspec Info: latinmodern-math scale = 0.9999967668407183.
 
@@ -1173,15 +1306,15 @@ t=math;language=dflt;"
 (fontspec)             =0pt\relax \fontdimen 21\font =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `normal' on input line 139.
+(Font)              `symbols' in the math version `normal' on input line 152.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
 (Font)                  OMS/lmsy/m/n --> TU/latinmodern-math.otf(2)/m/n on inpu
-t line 139.
+t line 152.
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `bold' on input line 139.
+(Font)              `symbols' in the math version `bold' on input line 152.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
 (Font)                  OMS/lmsy/b/n --> TU/latinmodern-math.otf(2)/b/n on inpu
-t line 139.
+t line 152.
 
 Package fontspec Info: latinmodern-math scale = 0.9999967668407183.
 
@@ -1251,17 +1384,17 @@ pt=math;language=dflt;"
 
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
 (Font)              `largesymbols' in the math version `normal' on input line 1
-39.
+52.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
 (Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/m/n on inpu
-t line 139.
+t line 152.
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 139
+(Font)              `largesymbols' in the math version `bold' on input line 152
 .
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 (Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/b/n on inpu
-t line 139.
-Package hyperref Info: Link coloring OFF on input line 139.
+t line 152.
+Package hyperref Info: Link coloring OFF on input line 152.
 (/home/wesley/.TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 (/home/wesley/.TinyTeX/texmf-dist/tex/latex/refcount/refcount.sty
@@ -1270,11 +1403,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (/home/wesley/.TinyTeX/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count366
+\c@section@level=\count369
 )
-LaTeX Info: Redefining \ref on input line 139.
-LaTeX Info: Redefining \pageref on input line 139.
-LaTeX Info: Redefining \nameref on input line 139.
+LaTeX Info: Redefining \ref on input line 152.
+LaTeX Info: Redefining \pageref on input line 152.
+LaTeX Info: Redefining \nameref on input line 152.
 (./trabalho_final.out) (./trabalho_final.out)
 \@outlinefile=\write4
 \openout4 = `trabalho_final.out'.
@@ -1313,6 +1446,9 @@ LaTeX Info: Redefining \nameref on input line 139.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
+LaTeX Info: Redefining \rmfamily on input line 152.
+LaTeX Info: Redefining \sffamily on input line 152.
+LaTeX Info: Redefining \ttfamily on input line 152.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: longtable package is loaded.
@@ -1325,55 +1461,70 @@ Package caption Info: End \AtBeginDocument code.
 Package pgfplots notification 'compat/show suggested version=true': you might b
 enefit from \pgfplotsset{compat=1.18} (current compat level: 1.16).
 
+Package babel Info: Hyphen rules for 'brazil' set to \l@english
+(babel)             (\language0). Reported on input line 152.
+Package polyglossia Info: Option: portuguese, variant=brazilian.
+Package babel Info: Hyphen rules for 'brazil' set to \l@english
+(babel)             (\language0). Reported on input line 152.
+Package polyglossia Info: Option: portuguese, variant=brazilian.
+LaTeX Info: Redefining \rmfamily on input line 152.
+LaTeX Info: Redefining \sffamily on input line 152.
+LaTeX Info: Redefining \ttfamily on input line 152.
+Package babel Info: Hyphen rules for 'brazil' set to \l@english
+(babel)             (\language0). Reported on input line 152.
+Package polyglossia Info: Option: portuguese, variant=brazilian.
+Package babel Info: Hyphen rules for 'brazil' set to \l@english
+(babel)             (\language0). Reported on input line 152.
+Package polyglossia Info: Option: portuguese, variant=brazilian.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 141.
+(Font)              scaled to size 12.0pt on input line 154.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 141.
+(Font)              scaled to size 8.0pt on input line 154.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 6.0pt on input line 141.
+(Font)              scaled to size 6.0pt on input line 154.
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-41.
+54.
 (/home/wesley/.TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 12.0011pt on input line 141.
+(Font)              scaled to size 12.0011pt on input line 154.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 8.00073pt on input line 141.
+(Font)              scaled to size 8.00073pt on input line 154.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 6.00055pt on input line 141.
+(Font)              scaled to size 6.00055pt on input line 154.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 11.99872pt on input line 141.
+(Font)              scaled to size 11.99872pt on input line 154.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.99915pt on input line 141.
+(Font)              scaled to size 7.99915pt on input line 154.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.99936pt on input line 141.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 141
+(Font)              scaled to size 5.99936pt on input line 154.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 154
 .
 (/home/wesley/.TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 141
+LaTeX Font Info:    Trying to load font information for U+msb on input line 154
 .
 (/home/wesley/.TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 7.665pt on input line 165.
+(Font)              scaled to size 7.665pt on input line 178.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 5.475pt on input line 165.
+(Font)              scaled to size 5.475pt on input line 178.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.95099pt on input line 165.
+(Font)              scaled to size 10.95099pt on input line 178.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.66568pt on input line 165.
+(Font)              scaled to size 7.66568pt on input line 178.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.4755pt on input line 165.
+(Font)              scaled to size 5.4755pt on input line 178.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 10.94882pt on input line 165.
+(Font)              scaled to size 10.94882pt on input line 178.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.66417pt on input line 165.
+(Font)              scaled to size 7.66417pt on input line 178.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.47441pt on input line 165.
+(Font)              scaled to size 5.47441pt on input line 178.
 [1
 
 ] [2]
@@ -1381,36 +1532,90 @@ File: trabalho_final_files/figure-latex/unnamed-chunk-4-1.pdf Graphic file (typ
 e pdf)
 <use trabalho_final_files/figure-latex/unnamed-chunk-4-1.pdf>
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 318.
+(Font)              scaled to size 10.0pt on input line 331.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 318.
+(Font)              scaled to size 7.0pt on input line 331.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 318.
+(Font)              scaled to size 5.0pt on input line 331.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.00092pt on input line 318.
+(Font)              scaled to size 10.00092pt on input line 331.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.00064pt on input line 318.
+(Font)              scaled to size 7.00064pt on input line 331.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.00046pt on input line 318.
+(Font)              scaled to size 5.00046pt on input line 331.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 9.99893pt on input line 318.
+(Font)              scaled to size 9.99893pt on input line 331.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 6.99925pt on input line 318.
+(Font)              scaled to size 6.99925pt on input line 331.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 4.99947pt on input line 318.
+(Font)              scaled to size 4.99947pt on input line 331.
 [3]
 File: trabalho_final_files/figure-latex/unnamed-chunk-11-1.pdf Graphic file (ty
 pe pdf)
 <use trabalho_final_files/figure-latex/unnamed-chunk-11-1.pdf>
-[4] [5] (./trabalho_final.aux)
+[4]
+The property list \polyglossia@langsetup contains the pairs (without outer
+braces):
+>  {latex/script}  =>  {latin}
+>  {latex/lcscript}  =>  {latin}
+>  {latex/scripttag}  =>  {}
+>  {latex/language}  =>  {Latex}
+>  {latex/langtag}  =>  {ENG}
+>  {latex/bcp47}  =>  {}
+>  {latex/hyphennames}  =>  {english}
+>  {latex/direction}  =>  {LR}
+>  {latex/hyphenmins}  =>  {2,3}
+>  {latex/frenchspacing}  =>  {false}
+>  {latex/indentfirst}  =>  {false}
+>  {latex/fontsetup}  =>  {true}
+>  {latex/envname}  =>  {latex}
+>  {latex/babelname}  =>  {latex}
+>  {latex/localnumeral}  =>  {polyglossia@C@localnumeral}
+>  {latex/Localnumeral}  =>  {polyglossia@C@localnumeral}
+>  {portuguese/script}  =>  {latin}
+>  {portuguese/lcscript}  =>  {latin}
+>  {portuguese/scripttag}  =>  {}
+>  {portuguese/language}  =>  {Portuguese}
+>  {portuguese/langtag}  =>  {PTG}
+>  {portuguese/bcp47}  =>  {pt-BR}
+>  {portuguese/hyphennames}  =>  {portuges,portuguese}
+>  {portuguese/direction}  =>  {LR}
+>  {portuguese/hyphenmins}  =>  {2,3}
+>  {portuguese/frenchspacing}  =>  {false}
+>  {portuguese/indentfirst}  =>  {false}
+>  {portuguese/fontsetup}  =>  {true}
+>  {portuguese/envname}  =>  {portuguese}
+>  {portuguese/babelname}  =>  {brazil}
+>  {portuguese/localnumeral}  =>  {polyglossia@C@localnumeral}
+>  {portuguese/Localnumeral}  =>  {polyglossia@C@localnumeral}.
+[5] (./trabalho_final.aux
+LaTeX Info: Redefining \rmfamily on input line 23.
+LaTeX Info: Redefining \sffamily on input line 23.
+LaTeX Info: Redefining \ttfamily on input line 23.
+Package babel Info: Hyphen rules for 'brazil' set to \l@english
+(babel)             (\language0). Reported on input line 27.
+Package polyglossia Info: Option: portuguese, variant=brazilian.
+Package babel Info: Hyphen rules for 'brazil' set to \l@english
+(babel)             (\language0). Reported on input line 27.
+Package polyglossia Info: Option: portuguese, variant=brazilian.
+LaTeX Info: Redefining \rmfamily on input line 27.
+LaTeX Info: Redefining \sffamily on input line 27.
+LaTeX Info: Redefining \ttfamily on input line 27.
+Package babel Info: Hyphen rules for 'brazil' set to \l@english
+(babel)             (\language0). Reported on input line 27.
+Package polyglossia Info: Option: portuguese, variant=brazilian.
+Package babel Info: Hyphen rules for 'brazil' set to \l@english
+(babel)             (\language0). Reported on input line 27.
+Package polyglossia Info: Option: portuguese, variant=brazilian.
+)
 Package rerunfilecheck Info: File `trabalho_final.out' has not changed.
 (rerunfilecheck)             Checksum: 73EF1F441B1BD6ACC170DCB2C931D282;1148.
  ) 
 Here is how much of TeX's memory you used:
- 40948 strings out of 478451
- 936523 string characters out of 5858535
- 1505425 words of memory out of 5000000
- 60605 multiletter control sequences out of 15000+600000
+ 42520 strings out of 478451
+ 966257 string characters out of 5858535
+ 1568969 words of memory out of 5000000
+ 62132 multiletter control sequences out of 15000+600000
  412911 words of font info for 102 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  108i,11n,120p,751b,479s stack positions out of 5000i,500n,10000p,200000b,80000s
